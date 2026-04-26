@@ -1,0 +1,12 @@
+Source_ID,Source / File,Type,Authority Role,Controls / Use in Package,Code Dev Use
+SRC-01,First-floor and second-floor grid schematic SVGs,SVG / plan,X/Y plan and room/outline context,"Floor-specific shell, room zones, covered loading, stair/open-below relationships",Use as visual/vector cross-check when refining geometry
+SRC-02,PSU_Tyler_SchematicDesign_202004 05 03[30]-4.pdf,PDF schematic set,Program + elevations + section context,"Room/program names, major adjacencies, elevations, high-bay/overlook/terrace relationships","Use for narrative validation and visual intent, not final model coordinates"
+SRC-03,Assignment 1 Requirements Document,DOCX,Walkthrough scope and platform rationale,"1:1 spatial evaluation purpose, desktop/VR access, host-led + free-roam logic",Use to keep model lightweight and stakeholder-review focused
+SRC-04,Assignment 2 Design Document,DOCX,LOD and scene sequence authority,Lightweight architectural model; Connector -> Office/Lab -> High-Bay -> Overlook sequence,Use as code development brief / experience structure
+SRC-05,Learning Assessment Plan,DOCX,Learning-review objective authority,"Spatial layout, equipment fit, workflow, design center relationship","Use to define interaction labels, review prompts, and success criteria"
+SRC-06,Existing-building interior photos,Images,Material/style reference,"Warm off-white walls, light wood trim, glass/aluminum storefront, refined lobby feel",Use for lobby/connector/overlook materials only; do not over-apply to high-bay
+SRC-07,Door Schedule v3.1 Restroom Wood Doors,XLSX,Door deployment reference,"Door sizes/types, restroom wood-door override, deployment flags",Use as door source workbook
+SRC-08,Wall Segment Schedule v2.4 Final Coordination,XLSX,Wall parent coordination reference,"Parent wall segments, wall thicknesses, material rules, door/window relationships",Use as wall parent table
+SRC-09,Window/Facade baseline derived in chat,XLSX / master section,Facade/window/opening deployment reference,Exterior/interior glazing and high-bay facade items; covered-loading doors at 12x14 ft,Use as window/facade source table
+SRC-10,Stair Opening Polygon Schedule v1 Finalized,XLSX,Open-below/cutout geometry,F2 open-to-lobby/stair opening polygon; no stair geometry,Use to cut slab opening only
+SRC-11,High-Bay Geometry Lock v1,XLSX,High-bay geometry lock,"Rotated parallelogram vertices, walls, roof/z/material/opening rules",Use as controlling high-bay geometry package

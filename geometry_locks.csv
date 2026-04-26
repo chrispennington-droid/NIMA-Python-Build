@@ -1,0 +1,8 @@
+Lock_ID,Geometry Item,Status,Controlling Values,Build Instruction
+GEO-001,High-bay footprint,LOCKED_DEPLOYABLE_BASELINE,"Rotated parallelogram, approx. 10,630 SF geometric footprint",Use as controlling high-bay shell footprint
+GEO-002,High-bay vertices,LOCKED_DEPLOYABLE_BASELINE,"HB-V1 (91,126), HB-V2 (151,116), HB-V3 (120,-56), HB-V4 (60,-46) feet",Use clockwise vertex order for shell/wall creation
+GEO-003,High-bay roof/east top,LOCKED,38.9569377990431 ft,Use as controlling high/east roof top
+GEO-004,F2 stair/open-to-lobby opening,FINALIZED_DEPLOYABLE_PROXY,"Approx. 433 SF, 4-vertex trapezoid",Cut slab/opening only; no stair mesh
+GEO-005,F2 high-bay open below,LOCKED_CONDITION,F2-ABX / high-bay open-to-below,No F2 slab in high-bay open-below volume
+GEO-006,F2-AAU,LOCKED_CONDITION,Entry canopy / roof cover band,"Treat as canopy/overhead condition, not standard wall"
+GEO-007,F2-AAT,LOCKED_CONDITION,Stair cutout / slab opening context,Coordinate with stair opening polygon

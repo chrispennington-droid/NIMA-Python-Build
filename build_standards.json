@@ -1,0 +1,128 @@
+[
+  {
+    "Standard_ID": "STD-001",
+    "Category": "Purpose / LOD",
+    "Locked Value / Rule": "Lightweight 1:1 spatial-review model for adjacency, circulation, workflow, equipment fit, and stakeholder discussion",
+    "Status": "LOCKED",
+    "Implementation Notes": "Not a BIM/construction-document deliverable"
+  },
+  {
+    "Standard_ID": "STD-002",
+    "Category": "Units",
+    "Locked Value / Rule": "Feet for all model output dimensions",
+    "Status": "LOCKED",
+    "Implementation Notes": "Grid-derived coordinates use 1 grid = 8 ft unless another source overrides"
+  },
+  {
+    "Standard_ID": "STD-003",
+    "Category": "Building treatment",
+    "Locked Value / Rule": "One connected building",
+    "Status": "LOCKED",
+    "Implementation Notes": "Do not export as disconnected masses"
+  },
+  {
+    "Standard_ID": "STD-004",
+    "Category": "Existing Tyler",
+    "Locked Value / Rule": "Sealed / no-entry in simplified model",
+    "Status": "LOCKED",
+    "Implementation Notes": "Represent as existing context mass or boundary only"
+  },
+  {
+    "Standard_ID": "STD-005",
+    "Category": "Interior wall thickness",
+    "Locked Value / Rule": "0.4167 ft / 5 in",
+    "Status": "LOCKED",
+    "Implementation Notes": "Apply to interior partitions unless a row says otherwise"
+  },
+  {
+    "Standard_ID": "STD-006",
+    "Category": "Exterior wall thickness",
+    "Locked Value / Rule": "1.0000 ft / 12 in",
+    "Status": "LOCKED",
+    "Implementation Notes": "Apply to exterior shell/high-bay walls"
+  },
+  {
+    "Standard_ID": "STD-007",
+    "Category": "Default floor material",
+    "Locked Value / Rule": "Use one consistent refined floor material throughout new non-high-bay areas",
+    "Status": "LOCKED",
+    "Implementation Notes": "Simplifies build"
+  },
+  {
+    "Standard_ID": "STD-008",
+    "Category": "High-bay floor material",
+    "Locked Value / Rule": "Cement slab",
+    "Status": "LOCKED",
+    "Implementation Notes": "Industrial look"
+  },
+  {
+    "Standard_ID": "STD-009",
+    "Category": "Wall finish",
+    "Locked Value / Rule": "Warm off-white / neutral painted walls throughout, including high-bay",
+    "Status": "LOCKED",
+    "Implementation Notes": "High-bay excludes wood trim"
+  },
+  {
+    "Standard_ID": "STD-010",
+    "Category": "High-bay trim",
+    "Locked Value / Rule": "No wood fixtures/trim in high-bay production area",
+    "Status": "LOCKED",
+    "Implementation Notes": "Industrial feel"
+  },
+  {
+    "Standard_ID": "STD-011",
+    "Category": "High-bay overlook finish",
+    "Locked Value / Rule": "Refined lobby/connector feel allowed, including light wood trim",
+    "Status": "LOCKED",
+    "Implementation Notes": "Use existing photos as style reference"
+  },
+  {
+    "Standard_ID": "STD-012",
+    "Category": "Restroom doors",
+    "Locked Value / Rule": "Solid wood, warm light woodwork match",
+    "Status": "LOCKED",
+    "Implementation Notes": "Overrides earlier default glass-door standard for RR doors"
+  },
+  {
+    "Standard_ID": "STD-013",
+    "Category": "Default doors",
+    "Locked Value / Rule": "Glass/aluminum where scheduled, except restroom wood doors and high-bay/service doors",
+    "Status": "LOCKED",
+    "Implementation Notes": "Keep schedule-specific overrides"
+  },
+  {
+    "Standard_ID": "STD-014",
+    "Category": "Covered-loading overhead doors",
+    "Locked Value / Rule": "3 overhead/sectional doors, each 12 ft W x 14 ft H",
+    "Status": "LOCKED",
+    "Implementation Notes": "Ignore earlier temporary 12 ft height input"
+  },
+  {
+    "Standard_ID": "STD-015",
+    "Category": "Stairs",
+    "Locked Value / Rule": "Do not auto-generate stairs",
+    "Status": "LOCKED",
+    "Implementation Notes": "Preserve opening/cutout only; manual stair insertion later"
+  },
+  {
+    "Standard_ID": "STD-016",
+    "Category": "High/east roof top",
+    "Locked Value / Rule": "38.9569377990431 ft controlling value",
+    "Status": "LOCKED",
+    "Implementation Notes": "39.08 ft may appear only as display/notes label"
+  },
+  {
+    "Standard_ID": "STD-017",
+    "Category": "Small-room ceilings",
+    "Locked Value / Rule": "Sub-500 SF rooms use suspended ceilings at 13.1144 ft except named exceptions",
+    "Status": "LOCKED",
+    "Implementation Notes": "Exceptions: GRIND/RECYC, PALETTE STORAGE, MEZZ.STOR, HIGH-BAY OVERLOOK"
+  },
+  {
+    "Standard_ID": "STD-018",
+    "Category": "Door/window placement rule",
+    "Locked Value / Rule": "Use door/window centerpoints or visual evidence; do not force midpoint of parent wall",
+    "Status": "LOCKED",
+    "Implementation Notes": "Wall schedule is parent coordination, not geometric override"
+  }
+]

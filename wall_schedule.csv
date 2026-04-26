@@ -1,0 +1,8 @@
+Segment_ID,Floor,Wall_Type,Thickness_ft,Related_Rooms_or_Zones,Door_Refs,Window_Facade_Refs,Material / Finish,Build_Status,Notes
+W-F1-EXISTING-SEAL,F1,Sealed Interface,0.4167,Existing Tyler interface,Reference only,None,Warm off-white boundary / existing context,REFERENCE_ONLY,No interior existing Tyler build
+W-F2-EXISTING-SEAL,F2,Sealed Interface,0.4167,Existing Tyler interface,Reference only,None,Warm off-white boundary / existing context,REFERENCE_ONLY,No interior existing Tyler build
+W-F1-MAIN-ENTRY-STOREFRONT,F1,Exterior / Storefront,1.0,Main entrance / lobby,GEM-F1-EXT-01,NF-004 / SF-004,Glass/aluminum storefront + refined trim,DEPLOYABLE_PROXY,Entry/lobby facade
+W-F1-SOUTH-WINDOW-BAND,F1,Exterior,1.0,South-facing office/lab windows,None,SF-002,Warm off-white with glazing,DEPLOYABLE_PROXY,South lower window band
+W-F2-NORTH-DESIGNCENTER-GLAZING,F2,Exterior,1.0,Design / Discovery north glazing,None,NF-003,Warm off-white with large glazing band,DEPLOYABLE_PROXY,Signature north F2 glazing
+W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY,F2,Guard / Edge,0.4167,High-Bay Overlook open-to-below edge,None,IG-006,Warm off-white / guard or glass edge,DEPLOYABLE_PROXY,Not a standard full wall
+HB-W-001 to HB-W-004,F1/F2,Exterior high-bay,1.0,F1-AAW / F2-ABX high-bay volume,"F1-DR-028, F1-DR-030","NF-001, SF-007, EF-001","Warm off-white industrial, no wood trim",LOCKED,Use high-bay geometry lock

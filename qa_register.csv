@@ -1,0 +1,9 @@
+QA_ID,Item,Status,Blocker,Resolution / Next Action
+QA-001,12 ft high input on covered-loading doors,RESOLVED,No,Ignore; controlling overhead door height is 14 ft
+QA-002,Restroom door material,RESOLVED,No,"Solid wood, warm light woodwork match"
+QA-003,Stair opening polygon,FINALIZED_PROXY,No,Use v1 finalized polygon; optional future vector cleanup only
+QA-004,High-bay geometry,LOCKED,No,Use high-bay lock v1 vertices and wall sequence
+QA-005,Window/facade dimensions,MOVE_FORWARD_BASELINE,No,Deployable proxy dimensions are adequate for 1:1 review build
+QA-006,Exact mullion spacing,DEFERRED,No,Not required before first build pass
+QA-007,Low/west exact wall endpoints,DEPLOYABLE_PROXY,No,Wall schedule provides parent coordination; vector extraction can refine later
+QA-008,Existing Tyler interior,LOCKED_OUT_OF_SCOPE,No,Sealed/no-entry simplified context

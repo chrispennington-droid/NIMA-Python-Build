@@ -1,0 +1,47 @@
+[
+  {
+    "Material_ID": "MAT-NEW-GENERAL",
+    "Applies_To": "New non-high-bay areas",
+    "Floor_Finish": "Uniform refined floor material",
+    "Wall_Finish": "Warm off-white painted walls",
+    "Trim / Accent": "Light wood accents allowed in refined areas",
+    "Status": "LOCKED",
+    "Notes": "Connector/lobby/office/lab simplified uniform floor"
+  },
+  {
+    "Material_ID": "MAT-HIGHBAY",
+    "Applies_To": "High-bay production area",
+    "Floor_Finish": "Cement slab",
+    "Wall_Finish": "Warm off-white / neutral industrial walls",
+    "Trim / Accent": "No wood trim",
+    "Status": "LOCKED",
+    "Notes": "Industrial high-bay look"
+  },
+  {
+    "Material_ID": "MAT-OVERLOOK",
+    "Applies_To": "High-bay overlook",
+    "Floor_Finish": "Uniform refined floor material",
+    "Wall_Finish": "Warm off-white painted walls",
+    "Trim / Accent": "Light wood trim allowed",
+    "Status": "LOCKED",
+    "Notes": "Refined feel from existing-building photos"
+  },
+  {
+    "Material_ID": "MAT-RESTROOM-DOOR",
+    "Applies_To": "Restroom doors",
+    "Floor_Finish": "N/A",
+    "Wall_Finish": "N/A",
+    "Trim / Accent": "Solid warm light wood door leaf",
+    "Status": "LOCKED",
+    "Notes": "Matches existing woodwork color family"
+  },
+  {
+    "Material_ID": "MAT-STOREFRONT",
+    "Applies_To": "Main entry / glazing",
+    "Floor_Finish": "Uniform refined floor material adjacent",
+    "Wall_Finish": "Warm off-white walls",
+    "Trim / Accent": "Glass/aluminum + light wood trim where appropriate",
+    "Status": "LOCKED",
+    "Notes": "Lobby/connector visual language"
+  }
+]

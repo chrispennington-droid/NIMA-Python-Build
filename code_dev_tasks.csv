@@ -1,0 +1,13 @@
+Task_ID,Build Step,Inputs,Output Object,Status,Notes
+CD-001,Set coordinate system and units,Build Standards,feet-based model grid,READY,Use 1 grid = 8 ft
+CD-002,Create existing Tyler sealed mass/context,Wall Schedule / Build Standards,sealed context geometry,READY,No interior existing rooms
+CD-003,Create high-bay shell,HighBay Geometry,rotated parallelogram shell,READY,Use locked vertices and exterior wall thickness
+CD-004,Create high-bay slab,Material Rules / HighBay Geometry,cement slab floor,READY,Industrial material
+CD-005,Create non-high-bay floor plates,Build Standards / Wall Schedule,uniform floor planes,READY_WITH_PROXY,Use source schedule for extents; exact low/west vector cleanup can refine later
+CD-006,Create walls/partitions,Wall Schedule,wall solids,READY_WITH_PROXY,Parent wall rows are coordination references
+CD-007,Cut stair/open-to-lobby opening,Stair Opening,slab opening only,READY,No stair geometry
+CD-008,Place doors,Door Rules + door schedule workbook,door/opening objects,READY_WITH_PROXY,Restroom doors wood; covered-loading doors 12x14
+CD-009,Place windows/facade panels,Facade Windows,glazing/panel objects,READY_WITH_PROXY,Mullions may remain simplified
+CD-010,Apply finish zones,Material Rules,assigned model materials,READY,Keep high-bay industrial; overlook refined
+CD-011,Add labels/review prompts,Design/Learning docs,review wayfinding / prompt boards,READY,Support spatial learning outcomes
+CD-012,Final QA pass,QA Register,build checklist,READY,Flag proxy items without blocking first pass

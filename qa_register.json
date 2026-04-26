@@ -1,0 +1,58 @@
+[
+  {
+    "QA_ID": "QA-001",
+    "Item": "12 ft high input on covered-loading doors",
+    "Status": "RESOLVED",
+    "Blocker": "No",
+    "Resolution / Next Action": "Ignore; controlling overhead door height is 14 ft"
+  },
+  {
+    "QA_ID": "QA-002",
+    "Item": "Restroom door material",
+    "Status": "RESOLVED",
+    "Blocker": "No",
+    "Resolution / Next Action": "Solid wood, warm light woodwork match"
+  },
+  {
+    "QA_ID": "QA-003",
+    "Item": "Stair opening polygon",
+    "Status": "FINALIZED_PROXY",
+    "Blocker": "No",
+    "Resolution / Next Action": "Use v1 finalized polygon; optional future vector cleanup only"
+  },
+  {
+    "QA_ID": "QA-004",
+    "Item": "High-bay geometry",
+    "Status": "LOCKED",
+    "Blocker": "No",
+    "Resolution / Next Action": "Use high-bay lock v1 vertices and wall sequence"
+  },
+  {
+    "QA_ID": "QA-005",
+    "Item": "Window/facade dimensions",
+    "Status": "MOVE_FORWARD_BASELINE",
+    "Blocker": "No",
+    "Resolution / Next Action": "Deployable proxy dimensions are adequate for 1:1 review build"
+  },
+  {
+    "QA_ID": "QA-006",
+    "Item": "Exact mullion spacing",
+    "Status": "DEFERRED",
+    "Blocker": "No",
+    "Resolution / Next Action": "Not required before first build pass"
+  },
+  {
+    "QA_ID": "QA-007",
+    "Item": "Low/west exact wall endpoints",
+    "Status": "DEPLOYABLE_PROXY",
+    "Blocker": "No",
+    "Resolution / Next Action": "Wall schedule provides parent coordination; vector extraction can refine later"
+  },
+  {
+    "QA_ID": "QA-008",
+    "Item": "Existing Tyler interior",
+    "Status": "LOCKED_OUT_OF_SCOPE",
+    "Blocker": "No",
+    "Resolution / Next Action": "Sealed/no-entry simplified context"
+  }
+]

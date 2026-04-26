@@ -1,0 +1,98 @@
+[
+  {
+    "Task_ID": "CD-001",
+    "Build Step": "Set coordinate system and units",
+    "Inputs": "Build Standards",
+    "Output Object": "feet-based model grid",
+    "Status": "READY",
+    "Notes": "Use 1 grid = 8 ft"
+  },
+  {
+    "Task_ID": "CD-002",
+    "Build Step": "Create existing Tyler sealed mass/context",
+    "Inputs": "Wall Schedule / Build Standards",
+    "Output Object": "sealed context geometry",
+    "Status": "READY",
+    "Notes": "No interior existing rooms"
+  },
+  {
+    "Task_ID": "CD-003",
+    "Build Step": "Create high-bay shell",
+    "Inputs": "HighBay Geometry",
+    "Output Object": "rotated parallelogram shell",
+    "Status": "READY",
+    "Notes": "Use locked vertices and exterior wall thickness"
+  },
+  {
+    "Task_ID": "CD-004",
+    "Build Step": "Create high-bay slab",
+    "Inputs": "Material Rules / HighBay Geometry",
+    "Output Object": "cement slab floor",
+    "Status": "READY",
+    "Notes": "Industrial material"
+  },
+  {
+    "Task_ID": "CD-005",
+    "Build Step": "Create non-high-bay floor plates",
+    "Inputs": "Build Standards / Wall Schedule",
+    "Output Object": "uniform floor planes",
+    "Status": "READY_WITH_PROXY",
+    "Notes": "Use source schedule for extents; exact low/west vector cleanup can refine later"
+  },
+  {
+    "Task_ID": "CD-006",
+    "Build Step": "Create walls/partitions",
+    "Inputs": "Wall Schedule",
+    "Output Object": "wall solids",
+    "Status": "READY_WITH_PROXY",
+    "Notes": "Parent wall rows are coordination references"
+  },
+  {
+    "Task_ID": "CD-007",
+    "Build Step": "Cut stair/open-to-lobby opening",
+    "Inputs": "Stair Opening",
+    "Output Object": "slab opening only",
+    "Status": "READY",
+    "Notes": "No stair geometry"
+  },
+  {
+    "Task_ID": "CD-008",
+    "Build Step": "Place doors",
+    "Inputs": "Door Rules + door schedule workbook",
+    "Output Object": "door/opening objects",
+    "Status": "READY_WITH_PROXY",
+    "Notes": "Restroom doors wood; covered-loading doors 12x14"
+  },
+  {
+    "Task_ID": "CD-009",
+    "Build Step": "Place windows/facade panels",
+    "Inputs": "Facade Windows",
+    "Output Object": "glazing/panel objects",
+    "Status": "READY_WITH_PROXY",
+    "Notes": "Mullions may remain simplified"
+  },
+  {
+    "Task_ID": "CD-010",
+    "Build Step": "Apply finish zones",
+    "Inputs": "Material Rules",
+    "Output Object": "assigned model materials",
+    "Status": "READY",
+    "Notes": "Keep high-bay industrial; overlook refined"
+  },
+  {
+    "Task_ID": "CD-011",
+    "Build Step": "Add labels/review prompts",
+    "Inputs": "Design/Learning docs",
+    "Output Object": "review wayfinding / prompt boards",
+    "Status": "READY",
+    "Notes": "Support spatial learning outcomes"
+  },
+  {
+    "Task_ID": "CD-012",
+    "Build Step": "Final QA pass",
+    "Inputs": "QA Register",
+    "Output Object": "build checklist",
+    "Status": "READY",
+    "Notes": "Flag proxy items without blocking first pass"
+  }
+]

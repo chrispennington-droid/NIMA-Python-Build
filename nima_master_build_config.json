@@ -1,0 +1,797 @@
+{
+  "package": {
+    "name": "NIMA Code Development Master Package",
+    "version": "v1.0",
+    "date": "2026-04-26",
+    "purpose": "Baseline package for code development/model generation for the NIMA Phase II 1:1 spatial-review build.",
+    "scope_note": "Deployable proxy dimensions for spatial review, not construction-document/BIM precision."
+  },
+  "standards": {
+    "STD-001": {
+      "category": "Purpose / LOD",
+      "value": "Lightweight 1:1 spatial-review model for adjacency, circulation, workflow, equipment fit, and stakeholder discussion",
+      "status": "LOCKED",
+      "notes": "Not a BIM/construction-document deliverable"
+    },
+    "STD-002": {
+      "category": "Units",
+      "value": "Feet for all model output dimensions",
+      "status": "LOCKED",
+      "notes": "Grid-derived coordinates use 1 grid = 8 ft unless another source overrides"
+    },
+    "STD-003": {
+      "category": "Building treatment",
+      "value": "One connected building",
+      "status": "LOCKED",
+      "notes": "Do not export as disconnected masses"
+    },
+    "STD-004": {
+      "category": "Existing Tyler",
+      "value": "Sealed / no-entry in simplified model",
+      "status": "LOCKED",
+      "notes": "Represent as existing context mass or boundary only"
+    },
+    "STD-005": {
+      "category": "Interior wall thickness",
+      "value": "0.4167 ft / 5 in",
+      "status": "LOCKED",
+      "notes": "Apply to interior partitions unless a row says otherwise"
+    },
+    "STD-006": {
+      "category": "Exterior wall thickness",
+      "value": "1.0000 ft / 12 in",
+      "status": "LOCKED",
+      "notes": "Apply to exterior shell/high-bay walls"
+    },
+    "STD-007": {
+      "category": "Default floor material",
+      "value": "Use one consistent refined floor material throughout new non-high-bay areas",
+      "status": "LOCKED",
+      "notes": "Simplifies build"
+    },
+    "STD-008": {
+      "category": "High-bay floor material",
+      "value": "Cement slab",
+      "status": "LOCKED",
+      "notes": "Industrial look"
+    },
+    "STD-009": {
+      "category": "Wall finish",
+      "value": "Warm off-white / neutral painted walls throughout, including high-bay",
+      "status": "LOCKED",
+      "notes": "High-bay excludes wood trim"
+    },
+    "STD-010": {
+      "category": "High-bay trim",
+      "value": "No wood fixtures/trim in high-bay production area",
+      "status": "LOCKED",
+      "notes": "Industrial feel"
+    },
+    "STD-011": {
+      "category": "High-bay overlook finish",
+      "value": "Refined lobby/connector feel allowed, including light wood trim",
+      "status": "LOCKED",
+      "notes": "Use existing photos as style reference"
+    },
+    "STD-012": {
+      "category": "Restroom doors",
+      "value": "Solid wood, warm light woodwork match",
+      "status": "LOCKED",
+      "notes": "Overrides earlier default glass-door standard for RR doors"
+    },
+    "STD-013": {
+      "category": "Default doors",
+      "value": "Glass/aluminum where scheduled, except restroom wood doors and high-bay/service doors",
+      "status": "LOCKED",
+      "notes": "Keep schedule-specific overrides"
+    },
+    "STD-014": {
+      "category": "Covered-loading overhead doors",
+      "value": "3 overhead/sectional doors, each 12 ft W x 14 ft H",
+      "status": "LOCKED",
+      "notes": "Ignore earlier temporary 12 ft height input"
+    },
+    "STD-015": {
+      "category": "Stairs",
+      "value": "Do not auto-generate stairs",
+      "status": "LOCKED",
+      "notes": "Preserve opening/cutout only; manual stair insertion later"
+    },
+    "STD-016": {
+      "category": "High/east roof top",
+      "value": "38.9569377990431 ft controlling value",
+      "status": "LOCKED",
+      "notes": "39.08 ft may appear only as display/notes label"
+    },
+    "STD-017": {
+      "category": "Small-room ceilings",
+      "value": "Sub-500 SF rooms use suspended ceilings at 13.1144 ft except named exceptions",
+      "status": "LOCKED",
+      "notes": "Exceptions: GRIND/RECYC, PALETTE STORAGE, MEZZ.STOR, HIGH-BAY OVERLOOK"
+    },
+    "STD-018": {
+      "category": "Door/window placement rule",
+      "value": "Use door/window centerpoints or visual evidence; do not force midpoint of parent wall",
+      "status": "LOCKED",
+      "notes": "Wall schedule is parent coordination, not geometric override"
+    }
+  },
+  "geometry_locks": {
+    "GEO-001": {
+      "item": "High-bay footprint",
+      "status": "LOCKED_DEPLOYABLE_BASELINE",
+      "values": "Rotated parallelogram, approx. 10,630 SF geometric footprint",
+      "build_instruction": "Use as controlling high-bay shell footprint"
+    },
+    "GEO-002": {
+      "item": "High-bay vertices",
+      "status": "LOCKED_DEPLOYABLE_BASELINE",
+      "values": "HB-V1 (91,126), HB-V2 (151,116), HB-V3 (120,-56), HB-V4 (60,-46) feet",
+      "build_instruction": "Use clockwise vertex order for shell/wall creation"
+    },
+    "GEO-003": {
+      "item": "High-bay roof/east top",
+      "status": "LOCKED",
+      "values": "38.9569377990431 ft",
+      "build_instruction": "Use as controlling high/east roof top"
+    },
+    "GEO-004": {
+      "item": "F2 stair/open-to-lobby opening",
+      "status": "FINALIZED_DEPLOYABLE_PROXY",
+      "values": "Approx. 433 SF, 4-vertex trapezoid",
+      "build_instruction": "Cut slab/opening only; no stair mesh"
+    },
+    "GEO-005": {
+      "item": "F2 high-bay open below",
+      "status": "LOCKED_CONDITION",
+      "values": "F2-ABX / high-bay open-to-below",
+      "build_instruction": "No F2 slab in high-bay open-below volume"
+    },
+    "GEO-006": {
+      "item": "F2-AAU",
+      "status": "LOCKED_CONDITION",
+      "values": "Entry canopy / roof cover band",
+      "build_instruction": "Treat as canopy/overhead condition, not standard wall"
+    },
+    "GEO-007": {
+      "item": "F2-AAT",
+      "status": "LOCKED_CONDITION",
+      "values": "Stair cutout / slab opening context",
+      "build_instruction": "Coordinate with stair opening polygon"
+    }
+  },
+  "high_bay": {
+    "vertices": [
+      {
+        "Vertex_ID": "HB-V1",
+        "Label": "NW",
+        "Grid_X": 11.375,
+        "Grid_Y": 15.75,
+        "Feet_X": 91,
+        "Feet_Y": 126,
+        "Notes": "Northwest high-bay corner"
+      },
+      {
+        "Vertex_ID": "HB-V2",
+        "Label": "NE",
+        "Grid_X": 18.875,
+        "Grid_Y": 14.5,
+        "Feet_X": 151,
+        "Feet_Y": 116,
+        "Notes": "Northeast high-bay corner"
+      },
+      {
+        "Vertex_ID": "HB-V3",
+        "Label": "SE",
+        "Grid_X": 15.0,
+        "Grid_Y": -7.0,
+        "Feet_X": 120,
+        "Feet_Y": -56,
+        "Notes": "Southeast high-bay corner"
+      },
+      {
+        "Vertex_ID": "HB-V4",
+        "Label": "SW",
+        "Grid_X": 7.5,
+        "Grid_Y": -5.75,
+        "Feet_X": 60,
+        "Feet_Y": -46,
+        "Notes": "Southwest high-bay corner"
+      }
+    ],
+    "walls": [
+      {
+        "Wall_ID": "HB-W-001",
+        "Start_Vertex": "HB-V1",
+        "End_Vertex": "HB-V2",
+        "Wall_Type": "Exterior",
+        "Thickness_ft": 1.0,
+        "Approx_Length_ft": 60.8,
+        "Related_Doors_Openings": "F1-DR-028 / high-bay north facade",
+        "Material / Finish": "Warm off-white / neutral industrial; no wood trim",
+        "Status": "LOCKED",
+        "Notes": "North wall, rotated"
+      },
+      {
+        "Wall_ID": "HB-W-002",
+        "Start_Vertex": "HB-V2",
+        "End_Vertex": "HB-V3",
+        "Wall_Type": "Exterior",
+        "Thickness_ft": 1.0,
+        "Approx_Length_ft": 176.0,
+        "Related_Doors_Openings": "F1-DR-030; EF-001 east vertical window/screen feature",
+        "Material / Finish": "Warm off-white / neutral industrial; no wood trim",
+        "Status": "LOCKED",
+        "Notes": "Long east wall"
+      },
+      {
+        "Wall_ID": "HB-W-003",
+        "Start_Vertex": "HB-V3",
+        "End_Vertex": "HB-V4",
+        "Wall_Type": "Exterior / loading side",
+        "Thickness_ft": 1.0,
+        "Approx_Length_ft": 60.0,
+        "Related_Doors_Openings": "3 overhead sectional doors, each 12x14 ft; service/loading facade",
+        "Material / Finish": "Warm off-white / neutral industrial; no wood trim",
+        "Status": "LOCKED",
+        "Notes": "South covered-loading/service wall"
+      },
+      {
+        "Wall_ID": "HB-W-004",
+        "Start_Vertex": "HB-V4",
+        "End_Vertex": "HB-V1",
+        "Wall_Type": "Exterior",
+        "Thickness_ft": 1.0,
+        "Approx_Length_ft": 176.0,
+        "Related_Doors_Openings": "High-bay west/interface wall",
+        "Material / Finish": "Warm off-white / neutral industrial; no wood trim",
+        "Status": "LOCKED",
+        "Notes": "Long west wall"
+      },
+      {
+        "Wall_ID": "HB-W-005",
+        "Start_Vertex": "See wall schedule",
+        "End_Vertex": "See wall schedule",
+        "Wall_Type": "Interior partition",
+        "Thickness_ft": 0.4167,
+        "Approx_Length_ft": 36.0,
+        "Related_Doors_Openings": "F1-DR-029 / GRIND-RECYC partition",
+        "Material / Finish": "Warm off-white / no wood trim",
+        "Status": "DEPLOYABLE_PROXY",
+        "Notes": "Interior support/high-bay partition"
+      }
+    ],
+    "footprint_sf_proxy": 10630,
+    "perimeter_lf_proxy": 471.2,
+    "roof_top_ft": 38.9569377990431,
+    "program_area_sf_reference": 8668
+  },
+  "stair_opening": {
+    "opening": [
+      {
+        "Opening_ID": "OV-F2-STAIR-OPENING",
+        "Level": "Second floor / slab opening",
+        "Related_Zone": "Open to Lobby Below adjacent to Covered Terrace and High-Bay Overlook",
+        "Shape_Type": "4-vertex trapezoid / polygon",
+        "Approx_Area_SF": 433,
+        "Build_As": "Opening only; no stair geometry",
+        "Status": "FINALIZED_DEPLOYABLE_PROXY",
+        "Notes": "Blue user outline accepted as controlling proxy boundary"
+      }
+    ],
+    "vertices": [
+      {
+        "Vertex_ID": "V1",
+        "Description": "Top-left",
+        "Approx_Grid_X": 4.42,
+        "Approx_Grid_Y": 3.92,
+        "Approx_X_FT": 35.4,
+        "Approx_Y_FT": 31.4,
+        "Notes": "Start at sloped top edge on left side"
+      },
+      {
+        "Vertex_ID": "V2",
+        "Description": "Top-right",
+        "Approx_Grid_X": 9.04,
+        "Approx_Grid_Y": 4.57,
+        "Approx_X_FT": 72.3,
+        "Approx_Y_FT": 36.6,
+        "Notes": "End of sloped top edge near High-Bay Overlook"
+      },
+      {
+        "Vertex_ID": "V3",
+        "Description": "Bottom-right",
+        "Approx_Grid_X": 8.98,
+        "Approx_Grid_Y": 2.75,
+        "Approx_X_FT": 71.8,
+        "Approx_Y_FT": 22.0,
+        "Notes": "Bottom-right return"
+      },
+      {
+        "Vertex_ID": "V4",
+        "Description": "Bottom-left",
+        "Approx_Grid_X": 4.57,
+        "Approx_Grid_Y": 2.75,
+        "Approx_X_FT": 36.6,
+        "Approx_Y_FT": 22.0,
+        "Notes": "Bottom-left return"
+      }
+    ]
+  },
+  "door_rules": [
+    {
+      "Door_Rule_ID": "DR-DEFAULT-GLASS",
+      "Applies_To": "Typical new interior/exterior scheduled glass doors",
+      "Width_ft": 3,
+      "Height_ft": "Per schedule",
+      "Material / Door Type": "Glass / aluminum where scheduled",
+      "Status": "LOCKED",
+      "Notes": "Default from earlier deployment door schedule except overrides"
+    },
+    {
+      "Door_Rule_ID": "DR-DOUBLE-GLASS",
+      "Applies_To": "Double doors / major entry pairs",
+      "Width_ft": 6,
+      "Height_ft": "Per schedule",
+      "Material / Door Type": "Glass / aluminum storefront or pair",
+      "Status": "LOCKED",
+      "Notes": "Simplified width standard"
+    },
+    {
+      "Door_Rule_ID": "DR-RESTROOM-WOOD",
+      "Applies_To": "Restroom doors",
+      "Width_ft": 3,
+      "Height_ft": "Per schedule",
+      "Material / Door Type": "Solid wood, warm light woodwork match",
+      "Status": "LOCKED",
+      "Notes": "New user directive; replaces glass for RR doors"
+    },
+    {
+      "Door_Rule_ID": "DR-HIGHBAY-OVERHEAD",
+      "Applies_To": "Covered loading overhead doors",
+      "Width_ft": 12,
+      "Height_ft": 14,
+      "Material / Door Type": "Overhead sectional doors",
+      "Status": "LOCKED",
+      "Notes": "Qty 3, 12 ft W x 14 ft H each; ignore earlier 12 ft height input"
+    },
+    {
+      "Door_Rule_ID": "DR-EXISTING-BLOCKED",
+      "Applies_To": "Existing Tyler connectors",
+      "Width_ft": null,
+      "Height_ft": null,
+      "Material / Door Type": "Reference only / blocked",
+      "Status": "REFERENCE_ONLY",
+      "Notes": "Do not generate as open circulation"
+    }
+  ],
+  "facade_windows": [
+    {
+      "Element_ID": "NF-001",
+      "Face": "North",
+      "Zone": "High-bay upper wall",
+      "Element_Type": "Large translucent/panelled opening",
+      "Qty": 1,
+      "Unit_Width_ft": 51.2,
+      "Unit_Height_ft": 32.0,
+      "Sill_ft": 4.0,
+      "Head_ft": 36.0,
+      "Build_As": "High-bay facade panel / translucent screen",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Industrial high-bay facade expression"
+    },
+    {
+      "Element_ID": "NF-002",
+      "Face": "North",
+      "Zone": "High-bay east edge",
+      "Element_Type": "Vertical dark accent strip",
+      "Qty": 1,
+      "Unit_Width_ft": 8.0,
+      "Unit_Height_ft": 36.0,
+      "Sill_ft": 0.0,
+      "Head_ft": 36.0,
+      "Build_As": "Facade accent strip, not window",
+      "Status": "COORDINATION_REFERENCE",
+      "Notes": "Do not count as glazing unit"
+    },
+    {
+      "Element_ID": "NF-003",
+      "Face": "North",
+      "Zone": "F2 Design / Discovery",
+      "Element_Type": "Large framed window band",
+      "Qty": 1,
+      "Unit_Width_ft": 62.4,
+      "Unit_Height_ft": 23.2,
+      "Sill_ft": 9.6,
+      "Head_ft": 32.8,
+      "Build_As": "Design-center glazing",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Large north F2 glazing from exterior render/elevation"
+    },
+    {
+      "Element_ID": "NF-004",
+      "Face": "North",
+      "Zone": "Main entry / vestibule",
+      "Element_Type": "Curtain wall / entry glazing",
+      "Qty": 1,
+      "Unit_Width_ft": 8.8,
+      "Unit_Height_ft": 30.4,
+      "Sill_ft": 0.0,
+      "Head_ft": 30.4,
+      "Build_As": "Vertical glazed entry bay",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Refined lobby storefront"
+    },
+    {
+      "Element_ID": "NF-005",
+      "Face": "North",
+      "Zone": "Entry canopy / connector edge",
+      "Element_Type": "Low glazing / guardrail band",
+      "Qty": 1,
+      "Unit_Width_ft": 25.6,
+      "Unit_Height_ft": 9.6,
+      "Sill_ft": 8.0,
+      "Head_ft": 17.6,
+      "Build_As": "Terrace/connector guardrail or low glazing band",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Use as visual facade band"
+    },
+    {
+      "Element_ID": "SF-001",
+      "Face": "South",
+      "Zone": "Connector / new entrance",
+      "Element_Type": "Horizontal ribbon window",
+      "Qty": 1,
+      "Unit_Width_ft": 11.2,
+      "Unit_Height_ft": 7.2,
+      "Sill_ft": 12.0,
+      "Head_ft": 19.2,
+      "Build_As": "Connector / entry ribbon",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Upper south glazing"
+    },
+    {
+      "Element_ID": "SF-002",
+      "Face": "South",
+      "Zone": "Secure Access / connector",
+      "Element_Type": "Horizontal ribbon window",
+      "Qty": 1,
+      "Unit_Width_ft": 12.8,
+      "Unit_Height_ft": 4.8,
+      "Sill_ft": 4.0,
+      "Head_ft": 8.8,
+      "Build_As": "Lower connector ribbon",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Lower south glazing"
+    },
+    {
+      "Element_ID": "SF-003",
+      "Face": "South",
+      "Zone": "Open stair / lobby",
+      "Element_Type": "Tall glazed slot",
+      "Qty": 1,
+      "Unit_Width_ft": 4.0,
+      "Unit_Height_ft": 27.2,
+      "Sill_ft": 0.0,
+      "Head_ft": 27.2,
+      "Build_As": "Vertical stair/lobby glazing",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Tall circulation glazing"
+    },
+    {
+      "Element_ID": "SF-004",
+      "Face": "South",
+      "Zone": "Second-floor office/lab rooms",
+      "Element_Type": "Grouped upper vertical windows",
+      "Qty": 3,
+      "Unit_Width_ft": 10.4,
+      "Unit_Height_ft": 10.4,
+      "Sill_ft": 14.0,
+      "Head_ft": 24.4,
+      "Build_As": "Grouped upper vertical windows",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Grouped row"
+    },
+    {
+      "Element_ID": "SF-005",
+      "Face": "South",
+      "Zone": "First-floor office/lab rooms",
+      "Element_Type": "Grouped lower vertical windows",
+      "Qty": 3,
+      "Unit_Width_ft": 10.4,
+      "Unit_Height_ft": 10.4,
+      "Sill_ft": 4.0,
+      "Head_ft": 14.4,
+      "Build_As": "Grouped lower vertical windows",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Grouped row"
+    },
+    {
+      "Element_ID": "SF-006",
+      "Face": "South",
+      "Zone": "Open stair / lobby",
+      "Element_Type": "Two-story vertical glazing",
+      "Qty": 1,
+      "Unit_Width_ft": 7.2,
+      "Unit_Height_ft": 32.0,
+      "Sill_ft": 0.0,
+      "Head_ft": 32.0,
+      "Build_As": "Tall circulation/lobby bay",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Strong vertical bay"
+    },
+    {
+      "Element_ID": "SF-007",
+      "Face": "South",
+      "Zone": "High-bay support/lab interface",
+      "Element_Type": "Horizontal window band",
+      "Qty": 1,
+      "Unit_Width_ft": 26.4,
+      "Unit_Height_ft": 9.6,
+      "Sill_ft": 4.0,
+      "Head_ft": 13.6,
+      "Build_As": "Low horizontal glazing",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "South-facing before high-bay"
+    },
+    {
+      "Element_ID": "SF-008",
+      "Face": "South",
+      "Zone": "High-bay production / covered loading",
+      "Element_Type": "Overhead sectional door",
+      "Qty": 1,
+      "Unit_Width_ft": 12.0,
+      "Unit_Height_ft": 14.0,
+      "Sill_ft": 0.0,
+      "Head_ft": 14.0,
+      "Build_As": "High-bay overhead door",
+      "Status": "LOCKED",
+      "Notes": "Door 1 of 3; final height is 14 ft"
+    },
+    {
+      "Element_ID": "SF-009",
+      "Face": "South",
+      "Zone": "High-bay production / covered loading",
+      "Element_Type": "Overhead sectional door",
+      "Qty": 1,
+      "Unit_Width_ft": 12.0,
+      "Unit_Height_ft": 14.0,
+      "Sill_ft": 0.0,
+      "Head_ft": 14.0,
+      "Build_As": "High-bay overhead door",
+      "Status": "LOCKED",
+      "Notes": "Door 2 of 3; final height is 14 ft"
+    },
+    {
+      "Element_ID": "SF-010",
+      "Face": "South",
+      "Zone": "High-bay production / covered loading",
+      "Element_Type": "Overhead sectional door",
+      "Qty": 1,
+      "Unit_Width_ft": 12.0,
+      "Unit_Height_ft": 14.0,
+      "Sill_ft": 0.0,
+      "Head_ft": 14.0,
+      "Build_As": "High-bay overhead door",
+      "Status": "LOCKED",
+      "Notes": "Door 3 of 3; final height is 14 ft"
+    },
+    {
+      "Element_ID": "SF-011",
+      "Face": "South",
+      "Zone": "High-bay east panel",
+      "Element_Type": "High-bay patterned/translucent window",
+      "Qty": 1,
+      "Unit_Width_ft": 24.0,
+      "Unit_Height_ft": 11.2,
+      "Sill_ft": 14.0,
+      "Head_ft": 25.2,
+      "Build_As": "Upper high-bay panel",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Patterned industrial panel"
+    },
+    {
+      "Element_ID": "EF-001",
+      "Face": "East",
+      "Zone": "High-bay east face",
+      "Element_Type": "Vertical window / screened opening",
+      "Qty": 1,
+      "Unit_Width_ft": 8.0,
+      "Unit_Height_ft": 32.0,
+      "Sill_ft": 4.0,
+      "Head_ft": 36.0,
+      "Build_As": "East-face vertical glazed or translucent screened opening",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "User pink-box clarification controls this as a real feature"
+    },
+    {
+      "Element_ID": "EF-002",
+      "Face": "East",
+      "Zone": "High-bay east face",
+      "Element_Type": "Ornamental facade treatment",
+      "Qty": 1,
+      "Unit_Width_ft": 8.0,
+      "Unit_Height_ft": 32.0,
+      "Sill_ft": 4.0,
+      "Head_ft": 36.0,
+      "Build_As": "Companion ornamental cement-like screen/treatment",
+      "Status": "COORDINATION_REFERENCE",
+      "Notes": "Do not count as a second separate window"
+    },
+    {
+      "Element_ID": "IG-001",
+      "Face": "Interior/F2",
+      "Zone": "Project Room 1 north/sloped exterior wall",
+      "Element_Type": "Window wall",
+      "Qty": 1,
+      "Unit_Width_ft": 12.0,
+      "Unit_Height_ft": 8.0,
+      "Sill_ft": 14.0,
+      "Head_ft": 22.0,
+      "Build_As": "Project-room window wall",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Plan crop label: Double Pane Window Wall"
+    },
+    {
+      "Element_ID": "IG-002",
+      "Face": "Interior/F2",
+      "Zone": "Project Room 2 north/sloped exterior wall",
+      "Element_Type": "Window wall",
+      "Qty": 1,
+      "Unit_Width_ft": 12.0,
+      "Unit_Height_ft": 8.0,
+      "Sill_ft": 14.0,
+      "Head_ft": 22.0,
+      "Build_As": "Project-room window wall",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Plan crop label: Window Wall"
+    },
+    {
+      "Element_ID": "IG-003",
+      "Face": "Interior/F2",
+      "Zone": "Covered Terrace north/sloped wall",
+      "Element_Type": "Window wall",
+      "Qty": 1,
+      "Unit_Width_ft": 28.0,
+      "Unit_Height_ft": 8.0,
+      "Sill_ft": 14.0,
+      "Head_ft": 22.0,
+      "Build_As": "Covered terrace window wall",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Plan crop explicitly marks Window Wall"
+    },
+    {
+      "Element_ID": "IG-004",
+      "Face": "Interior/F2",
+      "Zone": "High-Bay Overlook end wall",
+      "Element_Type": "Window wall",
+      "Qty": 1,
+      "Unit_Width_ft": 10.0,
+      "Unit_Height_ft": 8.0,
+      "Sill_ft": 14.0,
+      "Head_ft": 22.0,
+      "Build_As": "Overlook window wall",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Plan crop + render support"
+    },
+    {
+      "Element_ID": "IG-006",
+      "Face": "Interior/F2",
+      "Zone": "High-Bay Overlook open-to-below edge",
+      "Element_Type": "Guard/glazed edge",
+      "Qty": 1,
+      "Unit_Width_ft": 20.0,
+      "Unit_Height_ft": 4.0,
+      "Sill_ft": 14.0,
+      "Head_ft": 18.0,
+      "Build_As": "Guard / glass edge",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Not a full window; open-to-below edge"
+    }
+  ],
+  "materials": [
+    {
+      "Material_ID": "MAT-NEW-GENERAL",
+      "Applies_To": "New non-high-bay areas",
+      "Floor_Finish": "Uniform refined floor material",
+      "Wall_Finish": "Warm off-white painted walls",
+      "Trim / Accent": "Light wood accents allowed in refined areas",
+      "Status": "LOCKED",
+      "Notes": "Connector/lobby/office/lab simplified uniform floor"
+    },
+    {
+      "Material_ID": "MAT-HIGHBAY",
+      "Applies_To": "High-bay production area",
+      "Floor_Finish": "Cement slab",
+      "Wall_Finish": "Warm off-white / neutral industrial walls",
+      "Trim / Accent": "No wood trim",
+      "Status": "LOCKED",
+      "Notes": "Industrial high-bay look"
+    },
+    {
+      "Material_ID": "MAT-OVERLOOK",
+      "Applies_To": "High-bay overlook",
+      "Floor_Finish": "Uniform refined floor material",
+      "Wall_Finish": "Warm off-white painted walls",
+      "Trim / Accent": "Light wood trim allowed",
+      "Status": "LOCKED",
+      "Notes": "Refined feel from existing-building photos"
+    },
+    {
+      "Material_ID": "MAT-RESTROOM-DOOR",
+      "Applies_To": "Restroom doors",
+      "Floor_Finish": "N/A",
+      "Wall_Finish": "N/A",
+      "Trim / Accent": "Solid warm light wood door leaf",
+      "Status": "LOCKED",
+      "Notes": "Matches existing woodwork color family"
+    },
+    {
+      "Material_ID": "MAT-STOREFRONT",
+      "Applies_To": "Main entry / glazing",
+      "Floor_Finish": "Uniform refined floor material adjacent",
+      "Wall_Finish": "Warm off-white walls",
+      "Trim / Accent": "Glass/aluminum + light wood trim where appropriate",
+      "Status": "LOCKED",
+      "Notes": "Lobby/connector visual language"
+    }
+  ],
+  "qa_register": [
+    {
+      "QA_ID": "QA-001",
+      "Item": "12 ft high input on covered-loading doors",
+      "Status": "RESOLVED",
+      "Blocker": "No",
+      "Resolution / Next Action": "Ignore; controlling overhead door height is 14 ft"
+    },
+    {
+      "QA_ID": "QA-002",
+      "Item": "Restroom door material",
+      "Status": "RESOLVED",
+      "Blocker": "No",
+      "Resolution / Next Action": "Solid wood, warm light woodwork match"
+    },
+    {
+      "QA_ID": "QA-003",
+      "Item": "Stair opening polygon",
+      "Status": "FINALIZED_PROXY",
+      "Blocker": "No",
+      "Resolution / Next Action": "Use v1 finalized polygon; optional future vector cleanup only"
+    },
+    {
+      "QA_ID": "QA-004",
+      "Item": "High-bay geometry",
+      "Status": "LOCKED",
+      "Blocker": "No",
+      "Resolution / Next Action": "Use high-bay lock v1 vertices and wall sequence"
+    },
+    {
+      "QA_ID": "QA-005",
+      "Item": "Window/facade dimensions",
+      "Status": "MOVE_FORWARD_BASELINE",
+      "Blocker": "No",
+      "Resolution / Next Action": "Deployable proxy dimensions are adequate for 1:1 review build"
+    },
+    {
+      "QA_ID": "QA-006",
+      "Item": "Exact mullion spacing",
+      "Status": "DEFERRED",
+      "Blocker": "No",
+      "Resolution / Next Action": "Not required before first build pass"
+    },
+    {
+      "QA_ID": "QA-007",
+      "Item": "Low/west exact wall endpoints",
+      "Status": "DEPLOYABLE_PROXY",
+      "Blocker": "No",
+      "Resolution / Next Action": "Wall schedule provides parent coordination; vector extraction can refine later"
+    },
+    {
+      "QA_ID": "QA-008",
+      "Item": "Existing Tyler interior",
+      "Status": "LOCKED_OUT_OF_SCOPE",
+      "Blocker": "No",
+      "Resolution / Next Action": "Sealed/no-entry simplified context"
+    }
+  ]
+}

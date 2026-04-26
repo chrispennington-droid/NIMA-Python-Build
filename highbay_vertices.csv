@@ -1,0 +1,5 @@
+Vertex_ID,Label,Grid_X,Grid_Y,Feet_X,Feet_Y,Notes
+HB-V1,NW,11.375,15.75,91,126,Northwest high-bay corner
+HB-V2,NE,18.875,14.5,151,116,Northeast high-bay corner
+HB-V3,SE,15.0,-7.0,120,-56,Southeast high-bay corner
+HB-V4,SW,7.5,-5.75,60,-46,Southwest high-bay corner

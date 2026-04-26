@@ -1,0 +1,106 @@
+{
+  "vertices": [
+    {
+      "Vertex_ID": "HB-V1",
+      "Label": "NW",
+      "Grid_X": 11.375,
+      "Grid_Y": 15.75,
+      "Feet_X": 91,
+      "Feet_Y": 126,
+      "Notes": "Northwest high-bay corner"
+    },
+    {
+      "Vertex_ID": "HB-V2",
+      "Label": "NE",
+      "Grid_X": 18.875,
+      "Grid_Y": 14.5,
+      "Feet_X": 151,
+      "Feet_Y": 116,
+      "Notes": "Northeast high-bay corner"
+    },
+    {
+      "Vertex_ID": "HB-V3",
+      "Label": "SE",
+      "Grid_X": 15.0,
+      "Grid_Y": -7.0,
+      "Feet_X": 120,
+      "Feet_Y": -56,
+      "Notes": "Southeast high-bay corner"
+    },
+    {
+      "Vertex_ID": "HB-V4",
+      "Label": "SW",
+      "Grid_X": 7.5,
+      "Grid_Y": -5.75,
+      "Feet_X": 60,
+      "Feet_Y": -46,
+      "Notes": "Southwest high-bay corner"
+    }
+  ],
+  "walls": [
+    {
+      "Wall_ID": "HB-W-001",
+      "Start_Vertex": "HB-V1",
+      "End_Vertex": "HB-V2",
+      "Wall_Type": "Exterior",
+      "Thickness_ft": 1.0,
+      "Approx_Length_ft": 60.8,
+      "Related_Doors_Openings": "F1-DR-028 / high-bay north facade",
+      "Material / Finish": "Warm off-white / neutral industrial; no wood trim",
+      "Status": "LOCKED",
+      "Notes": "North wall, rotated"
+    },
+    {
+      "Wall_ID": "HB-W-002",
+      "Start_Vertex": "HB-V2",
+      "End_Vertex": "HB-V3",
+      "Wall_Type": "Exterior",
+      "Thickness_ft": 1.0,
+      "Approx_Length_ft": 176.0,
+      "Related_Doors_Openings": "F1-DR-030; EF-001 east vertical window/screen feature",
+      "Material / Finish": "Warm off-white / neutral industrial; no wood trim",
+      "Status": "LOCKED",
+      "Notes": "Long east wall"
+    },
+    {
+      "Wall_ID": "HB-W-003",
+      "Start_Vertex": "HB-V3",
+      "End_Vertex": "HB-V4",
+      "Wall_Type": "Exterior / loading side",
+      "Thickness_ft": 1.0,
+      "Approx_Length_ft": 60.0,
+      "Related_Doors_Openings": "3 overhead sectional doors, each 12x14 ft; service/loading facade",
+      "Material / Finish": "Warm off-white / neutral industrial; no wood trim",
+      "Status": "LOCKED",
+      "Notes": "South covered-loading/service wall"
+    },
+    {
+      "Wall_ID": "HB-W-004",
+      "Start_Vertex": "HB-V4",
+      "End_Vertex": "HB-V1",
+      "Wall_Type": "Exterior",
+      "Thickness_ft": 1.0,
+      "Approx_Length_ft": 176.0,
+      "Related_Doors_Openings": "High-bay west/interface wall",
+      "Material / Finish": "Warm off-white / neutral industrial; no wood trim",
+      "Status": "LOCKED",
+      "Notes": "Long west wall"
+    },
+    {
+      "Wall_ID": "HB-W-005",
+      "Start_Vertex": "See wall schedule",
+      "End_Vertex": "See wall schedule",
+      "Wall_Type": "Interior partition",
+      "Thickness_ft": 0.4167,
+      "Approx_Length_ft": 36.0,
+      "Related_Doors_Openings": "F1-DR-029 / GRIND-RECYC partition",
+      "Material / Finish": "Warm off-white / no wood trim",
+      "Status": "DEPLOYABLE_PROXY",
+      "Notes": "Interior support/high-bay partition"
+    }
+  ],
+  "footprint_sf_proxy": 10630,
+  "perimeter_lf_proxy": 471.2,
+  "roof_top_ft": 38.9569377990431,
+  "program_area_sf_reference": 8668
+}

@@ -1,0 +1,46 @@
+Package_Path,Type,Purpose
+NIMA_Code_Development_Master_Baseline_v1.xlsx,xlsx,Included in master package
+README_CODE_DEV_HANDOFF.md,md,Included in master package
+READY_TO_CODE_HANDOFF_PROMPT.md,md,Included in master package
+code_inputs/nima_master_build_config.json,json,Included in master package
+code_inputs/build_standards.json,json,Included in master package
+code_inputs/geometry_locks.json,json,Included in master package
+code_inputs/high_bay_geometry.json,json,Included in master package
+code_inputs/stair_opening_polygon.json,json,Included in master package
+code_inputs/door_rules_and_overrides.json,json,Included in master package
+code_inputs/window_facade_baseline.json,json,Included in master package
+code_inputs/material_finish_rules.json,json,Included in master package
+code_inputs/code_development_tasks.json,json,Included in master package
+code_inputs/qa_register.json,json,Included in master package
+source_schedules/NIMA_Door_Schedule_v3_1_Restroom_Wood_Doors.xlsx,xlsx,Included in master package
+source_schedules/NIMA_Wall_Segment_Schedule_v2_4_Final_Coordination.xlsx,xlsx,Included in master package
+source_schedules/NIMA_High_Bay_Geometry_Lock_v1.xlsx,xlsx,Included in master package
+source_schedules/NIMA_Stair_Opening_Polygon_Schedule_v1_Finalized.xlsx,xlsx,Included in master package
+csv_exports/source_register.csv,csv,Included in master package
+csv_exports/build_standards.csv,csv,Included in master package
+csv_exports/geometry_locks.csv,csv,Included in master package
+csv_exports/highbay_vertices.csv,csv,Included in master package
+csv_exports/highbay_walls.csv,csv,Included in master package
+csv_exports/stair_opening.csv,csv,Included in master package
+csv_exports/stair_vertices.csv,csv,Included in master package
+csv_exports/wall_schedule.csv,csv,Included in master package
+csv_exports/door_rules.csv,csv,Included in master package
+csv_exports/facade_windows.csv,csv,Included in master package
+csv_exports/materials.csv,csv,Included in master package
+csv_exports/code_dev_tasks.csv,csv,Included in master package
+csv_exports/qa_register.csv,csv,Included in master package
+source_drawings_and_references/NIMA Build First Floor With Grid Schematic(4).svg,svg,Included in master package
+source_drawings_and_references/NIMA Build Second Floor With Grid Schematic(4).svg,svg,Included in master package
+source_drawings_and_references/North and South Elevation flipped correctly with Grid(4).svg,svg,Included in master package
+source_drawings_and_references/NIMA East Side Rendered Depiction with Grid.svg,svg,Included in master package
+source_drawings_and_references/PSU_Tyler_SchematicDesign_202004 05 03[30]-4(4).pdf,pdf,Included in master package
+source_drawings_and_references/Screenshot 2026-04-26 at 5.16.38 PM.png,png,Included in master package
+source_drawings_and_references/Screenshot 2026-04-26 at 5.36.50 PM.png,png,Included in master package
+source_drawings_and_references/Screenshot 2026-04-26 at 5.37.13 PM.png,png,Included in master package
+source_drawings_and_references/IMG_3309.jpeg,jpeg,Included in master package
+source_drawings_and_references/IMG_3310.jpeg,jpeg,Included in master package
+source_drawings_and_references/IMG_3311.jpeg,jpeg,Included in master package
+source_drawings_and_references/IMG_3312.jpeg,jpeg,Included in master package
+source_drawings_and_references/IMG_3313.jpeg,jpeg,Included in master package
+source_drawings_and_references/IMG_3314.jpeg,jpeg,Included in master package
+source_drawings_and_references/IMG_3315.jpeg,jpeg,Included in master package

@@ -1,0 +1,6 @@
+Door_Rule_ID,Applies_To,Width_ft,Height_ft,Material / Door Type,Status,Notes
+DR-DEFAULT-GLASS,Typical new interior/exterior scheduled glass doors,3,Per schedule,Glass / aluminum where scheduled,LOCKED,Default from earlier deployment door schedule except overrides
+DR-DOUBLE-GLASS,Double doors / major entry pairs,6,Per schedule,Glass / aluminum storefront or pair,LOCKED,Simplified width standard
+DR-RESTROOM-WOOD,Restroom doors,3,Per schedule,"Solid wood, warm light woodwork match",LOCKED,New user directive; replaces glass for RR doors
+DR-HIGHBAY-OVERHEAD,Covered loading overhead doors,12,14,Overhead sectional doors,LOCKED,"Qty 3, 12 ft W x 14 ft H each; ignore earlier 12 ft height input"
+DR-EXISTING-BLOCKED,Existing Tyler connectors,,,Reference only / blocked,REFERENCE_ONLY,Do not generate as open circulation

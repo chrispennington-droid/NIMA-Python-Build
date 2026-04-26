@@ -1,0 +1,51 @@
+[
+  {
+    "Lock_ID": "GEO-001",
+    "Geometry Item": "High-bay footprint",
+    "Status": "LOCKED_DEPLOYABLE_BASELINE",
+    "Controlling Values": "Rotated parallelogram, approx. 10,630 SF geometric footprint",
+    "Build Instruction": "Use as controlling high-bay shell footprint"
+  },
+  {
+    "Lock_ID": "GEO-002",
+    "Geometry Item": "High-bay vertices",
+    "Status": "LOCKED_DEPLOYABLE_BASELINE",
+    "Controlling Values": "HB-V1 (91,126), HB-V2 (151,116), HB-V3 (120,-56), HB-V4 (60,-46) feet",
+    "Build Instruction": "Use clockwise vertex order for shell/wall creation"
+  },
+  {
+    "Lock_ID": "GEO-003",
+    "Geometry Item": "High-bay roof/east top",
+    "Status": "LOCKED",
+    "Controlling Values": "38.9569377990431 ft",
+    "Build Instruction": "Use as controlling high/east roof top"
+  },
+  {
+    "Lock_ID": "GEO-004",
+    "Geometry Item": "F2 stair/open-to-lobby opening",
+    "Status": "FINALIZED_DEPLOYABLE_PROXY",
+    "Controlling Values": "Approx. 433 SF, 4-vertex trapezoid",
+    "Build Instruction": "Cut slab/opening only; no stair mesh"
+  },
+  {
+    "Lock_ID": "GEO-005",
+    "Geometry Item": "F2 high-bay open below",
+    "Status": "LOCKED_CONDITION",
+    "Controlling Values": "F2-ABX / high-bay open-to-below",
+    "Build Instruction": "No F2 slab in high-bay open-below volume"
+  },
+  {
+    "Lock_ID": "GEO-006",
+    "Geometry Item": "F2-AAU",
+    "Status": "LOCKED_CONDITION",
+    "Controlling Values": "Entry canopy / roof cover band",
+    "Build Instruction": "Treat as canopy/overhead condition, not standard wall"
+  },
+  {
+    "Lock_ID": "GEO-007",
+    "Geometry Item": "F2-AAT",
+    "Status": "LOCKED_CONDITION",
+    "Controlling Values": "Stair cutout / slab opening context",
+    "Build Instruction": "Coordinate with stair opening polygon"
+  }
+]

@@ -1,0 +1,19 @@
+Standard_ID,Category,Locked Value / Rule,Status,Implementation Notes
+STD-001,Purpose / LOD,"Lightweight 1:1 spatial-review model for adjacency, circulation, workflow, equipment fit, and stakeholder discussion",LOCKED,Not a BIM/construction-document deliverable
+STD-002,Units,Feet for all model output dimensions,LOCKED,Grid-derived coordinates use 1 grid = 8 ft unless another source overrides
+STD-003,Building treatment,One connected building,LOCKED,Do not export as disconnected masses
+STD-004,Existing Tyler,Sealed / no-entry in simplified model,LOCKED,Represent as existing context mass or boundary only
+STD-005,Interior wall thickness,0.4167 ft / 5 in,LOCKED,Apply to interior partitions unless a row says otherwise
+STD-006,Exterior wall thickness,1.0000 ft / 12 in,LOCKED,Apply to exterior shell/high-bay walls
+STD-007,Default floor material,Use one consistent refined floor material throughout new non-high-bay areas,LOCKED,Simplifies build
+STD-008,High-bay floor material,Cement slab,LOCKED,Industrial look
+STD-009,Wall finish,"Warm off-white / neutral painted walls throughout, including high-bay",LOCKED,High-bay excludes wood trim
+STD-010,High-bay trim,No wood fixtures/trim in high-bay production area,LOCKED,Industrial feel
+STD-011,High-bay overlook finish,"Refined lobby/connector feel allowed, including light wood trim",LOCKED,Use existing photos as style reference
+STD-012,Restroom doors,"Solid wood, warm light woodwork match",LOCKED,Overrides earlier default glass-door standard for RR doors
+STD-013,Default doors,"Glass/aluminum where scheduled, except restroom wood doors and high-bay/service doors",LOCKED,Keep schedule-specific overrides
+STD-014,Covered-loading overhead doors,"3 overhead/sectional doors, each 12 ft W x 14 ft H",LOCKED,Ignore earlier temporary 12 ft height input
+STD-015,Stairs,Do not auto-generate stairs,LOCKED,Preserve opening/cutout only; manual stair insertion later
+STD-016,High/east roof top,38.9569377990431 ft controlling value,LOCKED,39.08 ft may appear only as display/notes label
+STD-017,Small-room ceilings,Sub-500 SF rooms use suspended ceilings at 13.1144 ft except named exceptions,LOCKED,"Exceptions: GRIND/RECYC, PALETTE STORAGE, MEZZ.STOR, HIGH-BAY OVERLOOK"
+STD-018,Door/window placement rule,Use door/window centerpoints or visual evidence; do not force midpoint of parent wall,LOCKED,"Wall schedule is parent coordination, not geometric override"

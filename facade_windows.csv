@@ -1,0 +1,24 @@
+Element_ID,Face,Zone,Element_Type,Qty,Unit_Width_ft,Unit_Height_ft,Sill_ft,Head_ft,Build_As,Status,Notes
+NF-001,North,High-bay upper wall,Large translucent/panelled opening,1,51.2,32.0,4.0,36.0,High-bay facade panel / translucent screen,DEPLOYABLE_PROXY,Industrial high-bay facade expression
+NF-002,North,High-bay east edge,Vertical dark accent strip,1,8.0,36.0,0.0,36.0,"Facade accent strip, not window",COORDINATION_REFERENCE,Do not count as glazing unit
+NF-003,North,F2 Design / Discovery,Large framed window band,1,62.4,23.2,9.6,32.8,Design-center glazing,DEPLOYABLE_PROXY,Large north F2 glazing from exterior render/elevation
+NF-004,North,Main entry / vestibule,Curtain wall / entry glazing,1,8.8,30.4,0.0,30.4,Vertical glazed entry bay,DEPLOYABLE_PROXY,Refined lobby storefront
+NF-005,North,Entry canopy / connector edge,Low glazing / guardrail band,1,25.6,9.6,8.0,17.6,Terrace/connector guardrail or low glazing band,DEPLOYABLE_PROXY,Use as visual facade band
+SF-001,South,Connector / new entrance,Horizontal ribbon window,1,11.2,7.2,12.0,19.2,Connector / entry ribbon,DEPLOYABLE_PROXY,Upper south glazing
+SF-002,South,Secure Access / connector,Horizontal ribbon window,1,12.8,4.8,4.0,8.8,Lower connector ribbon,DEPLOYABLE_PROXY,Lower south glazing
+SF-003,South,Open stair / lobby,Tall glazed slot,1,4.0,27.2,0.0,27.2,Vertical stair/lobby glazing,DEPLOYABLE_PROXY,Tall circulation glazing
+SF-004,South,Second-floor office/lab rooms,Grouped upper vertical windows,3,10.4,10.4,14.0,24.4,Grouped upper vertical windows,DEPLOYABLE_PROXY,Grouped row
+SF-005,South,First-floor office/lab rooms,Grouped lower vertical windows,3,10.4,10.4,4.0,14.4,Grouped lower vertical windows,DEPLOYABLE_PROXY,Grouped row
+SF-006,South,Open stair / lobby,Two-story vertical glazing,1,7.2,32.0,0.0,32.0,Tall circulation/lobby bay,DEPLOYABLE_PROXY,Strong vertical bay
+SF-007,South,High-bay support/lab interface,Horizontal window band,1,26.4,9.6,4.0,13.6,Low horizontal glazing,DEPLOYABLE_PROXY,South-facing before high-bay
+SF-008,South,High-bay production / covered loading,Overhead sectional door,1,12.0,14.0,0.0,14.0,High-bay overhead door,LOCKED,Door 1 of 3; final height is 14 ft
+SF-009,South,High-bay production / covered loading,Overhead sectional door,1,12.0,14.0,0.0,14.0,High-bay overhead door,LOCKED,Door 2 of 3; final height is 14 ft
+SF-010,South,High-bay production / covered loading,Overhead sectional door,1,12.0,14.0,0.0,14.0,High-bay overhead door,LOCKED,Door 3 of 3; final height is 14 ft
+SF-011,South,High-bay east panel,High-bay patterned/translucent window,1,24.0,11.2,14.0,25.2,Upper high-bay panel,DEPLOYABLE_PROXY,Patterned industrial panel
+EF-001,East,High-bay east face,Vertical window / screened opening,1,8.0,32.0,4.0,36.0,East-face vertical glazed or translucent screened opening,DEPLOYABLE_PROXY,User pink-box clarification controls this as a real feature
+EF-002,East,High-bay east face,Ornamental facade treatment,1,8.0,32.0,4.0,36.0,Companion ornamental cement-like screen/treatment,COORDINATION_REFERENCE,Do not count as a second separate window
+IG-001,Interior/F2,Project Room 1 north/sloped exterior wall,Window wall,1,12.0,8.0,14.0,22.0,Project-room window wall,DEPLOYABLE_PROXY,Plan crop label: Double Pane Window Wall
+IG-002,Interior/F2,Project Room 2 north/sloped exterior wall,Window wall,1,12.0,8.0,14.0,22.0,Project-room window wall,DEPLOYABLE_PROXY,Plan crop label: Window Wall
+IG-003,Interior/F2,Covered Terrace north/sloped wall,Window wall,1,28.0,8.0,14.0,22.0,Covered terrace window wall,DEPLOYABLE_PROXY,Plan crop explicitly marks Window Wall
+IG-004,Interior/F2,High-Bay Overlook end wall,Window wall,1,10.0,8.0,14.0,22.0,Overlook window wall,DEPLOYABLE_PROXY,Plan crop + render support
+IG-006,Interior/F2,High-Bay Overlook open-to-below edge,Guard/glazed edge,1,20.0,4.0,14.0,18.0,Guard / glass edge,DEPLOYABLE_PROXY,Not a full window; open-to-below edge

@@ -1,0 +1,6 @@
+Material_ID,Applies_To,Floor_Finish,Wall_Finish,Trim / Accent,Status,Notes
+MAT-NEW-GENERAL,New non-high-bay areas,Uniform refined floor material,Warm off-white painted walls,Light wood accents allowed in refined areas,LOCKED,Connector/lobby/office/lab simplified uniform floor
+MAT-HIGHBAY,High-bay production area,Cement slab,Warm off-white / neutral industrial walls,No wood trim,LOCKED,Industrial high-bay look
+MAT-OVERLOOK,High-bay overlook,Uniform refined floor material,Warm off-white painted walls,Light wood trim allowed,LOCKED,Refined feel from existing-building photos
+MAT-RESTROOM-DOOR,Restroom doors,N/A,N/A,Solid warm light wood door leaf,LOCKED,Matches existing woodwork color family
+MAT-STOREFRONT,Main entry / glazing,Uniform refined floor material adjacent,Warm off-white walls,Glass/aluminum + light wood trim where appropriate,LOCKED,Lobby/connector visual language

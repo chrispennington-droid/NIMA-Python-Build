@@ -1,0 +1,6 @@
+Wall_ID,Start_Vertex,End_Vertex,Wall_Type,Thickness_ft,Approx_Length_ft,Related_Doors_Openings,Material / Finish,Status,Notes
+HB-W-001,HB-V1,HB-V2,Exterior,1.0,60.8,F1-DR-028 / high-bay north facade,Warm off-white / neutral industrial; no wood trim,LOCKED,"North wall, rotated"
+HB-W-002,HB-V2,HB-V3,Exterior,1.0,176.0,F1-DR-030; EF-001 east vertical window/screen feature,Warm off-white / neutral industrial; no wood trim,LOCKED,Long east wall
+HB-W-003,HB-V3,HB-V4,Exterior / loading side,1.0,60.0,"3 overhead sectional doors, each 12x14 ft; service/loading facade",Warm off-white / neutral industrial; no wood trim,LOCKED,South covered-loading/service wall
+HB-W-004,HB-V4,HB-V1,Exterior,1.0,176.0,High-bay west/interface wall,Warm off-white / neutral industrial; no wood trim,LOCKED,Long west wall
+HB-W-005,See wall schedule,See wall schedule,Interior partition,0.4167,36.0,F1-DR-029 / GRIND-RECYC partition,Warm off-white / no wood trim,DEPLOYABLE_PROXY,Interior support/high-bay partition

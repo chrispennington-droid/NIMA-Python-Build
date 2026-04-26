@@ -1,0 +1,5 @@
+Vertex_ID,Description,Approx_Grid_X,Approx_Grid_Y,Approx_X_FT,Approx_Y_FT,Notes
+V1,Top-left,4.42,3.92,35.4,31.4,Start at sloped top edge on left side
+V2,Top-right,9.04,4.57,72.3,36.6,End of sloped top edge near High-Bay Overlook
+V3,Bottom-right,8.98,2.75,71.8,22.0,Bottom-right return
+V4,Bottom-left,4.57,2.75,36.6,22.0,Bottom-left return

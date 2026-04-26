@@ -1,0 +1,47 @@
+[
+  {
+    "Door_Rule_ID": "DR-DEFAULT-GLASS",
+    "Applies_To": "Typical new interior/exterior scheduled glass doors",
+    "Width_ft": 3,
+    "Height_ft": "Per schedule",
+    "Material / Door Type": "Glass / aluminum where scheduled",
+    "Status": "LOCKED",
+    "Notes": "Default from earlier deployment door schedule except overrides"
+  },
+  {
+    "Door_Rule_ID": "DR-DOUBLE-GLASS",
+    "Applies_To": "Double doors / major entry pairs",
+    "Width_ft": 6,
+    "Height_ft": "Per schedule",
+    "Material / Door Type": "Glass / aluminum storefront or pair",
+    "Status": "LOCKED",
+    "Notes": "Simplified width standard"
+  },
+  {
+    "Door_Rule_ID": "DR-RESTROOM-WOOD",
+    "Applies_To": "Restroom doors",
+    "Width_ft": 3,
+    "Height_ft": "Per schedule",
+    "Material / Door Type": "Solid wood, warm light woodwork match",
+    "Status": "LOCKED",
+    "Notes": "New user directive; replaces glass for RR doors"
+  },
+  {
+    "Door_Rule_ID": "DR-HIGHBAY-OVERHEAD",
+    "Applies_To": "Covered loading overhead doors",
+    "Width_ft": 12,
+    "Height_ft": 14,
+    "Material / Door Type": "Overhead sectional doors",
+    "Status": "LOCKED",
+    "Notes": "Qty 3, 12 ft W x 14 ft H each; ignore earlier 12 ft height input"
+  },
+  {
+    "Door_Rule_ID": "DR-EXISTING-BLOCKED",
+    "Applies_To": "Existing Tyler connectors",
+    "Width_ft": null,
+    "Height_ft": null,
+    "Material / Door Type": "Reference only / blocked",
+    "Status": "REFERENCE_ONLY",
+    "Notes": "Do not generate as open circulation"
+  }
+]

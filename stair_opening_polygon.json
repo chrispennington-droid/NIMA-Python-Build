@@ -1,0 +1,52 @@
+{
+  "opening": [
+    {
+      "Opening_ID": "OV-F2-STAIR-OPENING",
+      "Level": "Second floor / slab opening",
+      "Related_Zone": "Open to Lobby Below adjacent to Covered Terrace and High-Bay Overlook",
+      "Shape_Type": "4-vertex trapezoid / polygon",
+      "Approx_Area_SF": 433,
+      "Build_As": "Opening only; no stair geometry",
+      "Status": "FINALIZED_DEPLOYABLE_PROXY",
+      "Notes": "Blue user outline accepted as controlling proxy boundary"
+    }
+  ],
+  "vertices": [
+    {
+      "Vertex_ID": "V1",
+      "Description": "Top-left",
+      "Approx_Grid_X": 4.42,
+      "Approx_Grid_Y": 3.92,
+      "Approx_X_FT": 35.4,
+      "Approx_Y_FT": 31.4,
+      "Notes": "Start at sloped top edge on left side"
+    },
+    {
+      "Vertex_ID": "V2",
+      "Description": "Top-right",
+      "Approx_Grid_X": 9.04,
+      "Approx_Grid_Y": 4.57,
+      "Approx_X_FT": 72.3,
+      "Approx_Y_FT": 36.6,
+      "Notes": "End of sloped top edge near High-Bay Overlook"
+    },
+    {
+      "Vertex_ID": "V3",
+      "Description": "Bottom-right",
+      "Approx_Grid_X": 8.98,
+      "Approx_Grid_Y": 2.75,
+      "Approx_X_FT": 71.8,
+      "Approx_Y_FT": 22.0,
+      "Notes": "Bottom-right return"
+    },
+    {
+      "Vertex_ID": "V4",
+      "Description": "Bottom-left",
+      "Approx_Grid_X": 4.57,
+      "Approx_Grid_Y": 2.75,
+      "Approx_X_FT": 36.6,
+      "Approx_Y_FT": 22.0,
+      "Notes": "Bottom-left return"
+    }
+  ]
+}
