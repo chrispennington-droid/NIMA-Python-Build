@@ -1,0 +1,122 @@
+{
+  "generated_at_utc": "2026-04-26T23:49:13.491432+00:00",
+  "pass_label": "minimal_first_pass",
+  "package": {
+    "name": "NIMA Code Development Master Package",
+    "version": "v1.0",
+    "date": "2026-04-26"
+  },
+  "locked_assumptions_applied": [
+    "STD-001: Purpose / LOD = Lightweight 1:1 spatial-review model for adjacency, circulation, workflow, equipment fit, and stakeholder discussion",
+    "STD-002: Units = Feet for all model output dimensions",
+    "STD-003: Building treatment = One connected building",
+    "STD-004: Existing Tyler = Sealed / no-entry in simplified model",
+    "STD-005: Interior wall thickness = 0.4167 ft / 5 in",
+    "STD-006: Exterior wall thickness = 1.0000 ft / 12 in",
+    "STD-007: Default floor material = Use one consistent refined floor material throughout new non-high-bay areas",
+    "STD-008: High-bay floor material = Cement slab",
+    "STD-009: Wall finish = Warm off-white / neutral painted walls throughout, including high-bay",
+    "STD-010: High-bay trim = No wood fixtures/trim in high-bay production area",
+    "STD-011: High-bay overlook finish = Refined lobby/connector feel allowed, including light wood trim",
+    "STD-012: Restroom doors = Solid wood, warm light woodwork match",
+    "STD-013: Default doors = Glass/aluminum where scheduled, except restroom wood doors and high-bay/service doors",
+    "STD-014: Covered-loading overhead doors = 3 overhead/sectional doors, each 12 ft W x 14 ft H",
+    "STD-015: Stairs = Do not auto-generate stairs",
+    "STD-016: High/east roof top = 38.9569377990431 ft controlling value",
+    "STD-017: Small-room ceilings = Sub-500 SF rooms use suspended ceilings at 13.1144 ft except named exceptions",
+    "STD-018: Door/window placement rule = Use door/window centerpoints or visual evidence; do not force midpoint of parent wall",
+    "GEO-001: High-bay footprint (LOCKED_DEPLOYABLE_BASELINE)",
+    "GEO-002: High-bay vertices (LOCKED_DEPLOYABLE_BASELINE)",
+    "GEO-003: High-bay roof/east top (LOCKED)",
+    "GEO-004: F2 stair/open-to-lobby opening (FINALIZED_DEPLOYABLE_PROXY)",
+    "HighBay vertices HB-V1..V4 match locked baseline (clockwise order)",
+    "Roof/east top = 38.9569377990431 ft",
+    "F2 stair/open-to-lobby opening: 4-vertex polygon, slab cut only, no stair mesh",
+    "DR-DEFAULT-GLASS: Typical new interior/exterior scheduled glass doors (Glass / aluminum where scheduled)",
+    "DR-DOUBLE-GLASS: Double doors / major entry pairs (Glass / aluminum storefront or pair)",
+    "DR-RESTROOM-WOOD: Restroom doors (Solid wood, warm light woodwork match)",
+    "DR-HIGHBAY-OVERHEAD: Covered loading overhead doors (Overhead sectional doors)",
+    "DR-EXISTING-BLOCKED: Existing Tyler connectors (Reference only / blocked)",
+    "Material MAT-NEW-GENERAL present",
+    "Material MAT-HIGHBAY present",
+    "Material MAT-OVERLOOK present",
+    "Material MAT-RESTROOM-DOOR present",
+    "Material MAT-STOREFRONT present"
+  ],
+  "warnings": [],
+  "errors": [],
+  "proxy_flags": [
+    "HB-W-005 Interior partition is DEPLOYABLE_PROXY \u2014 start/end vertices defer to wall schedule",
+    "QA-003: Stair opening polygon (FINALIZED_PROXY)",
+    "QA-005: Window/facade dimensions (MOVE_FORWARD_BASELINE)",
+    "QA-006: Exact mullion spacing (DEFERRED)",
+    "QA-007: Low/west exact wall endpoints (DEPLOYABLE_PROXY)"
+  ],
+  "inferred_assumptions": [
+    {
+      "key": "f2_floor_ft",
+      "value": 14.0,
+      "reason": "Inferred from facade window sill data: F1 windows head ~14 ft, F2 lower windows sill = 14 ft, F2 project-room windows sill = 14 ft. Not explicitly locked in the package."
+    },
+    {
+      "key": "non_highbay_envelope",
+      "value": "not_built",
+      "reason": "Package gives wall_schedule parent rows but no endpoint coordinates for the new non-high-bay portion. First pass intentionally skips fabricating coordinates; needs vector extraction from SVG plans."
+    },
+    {
+      "key": "roof_pitch",
+      "value": "flat_cap",
+      "reason": "GEO-003 locks roof top elevation only. No pitch/parapet detail in the package; first pass uses a flat cap."
+    },
+    {
+      "key": "openings_centerpoints",
+      "value": "centered_on_parent_wall_or_evenly_spaced",
+      "reason": "STD-018: use centerpoints or visual evidence. Package does not give per-element centerpoints. First pass centers on parent wall, and evenly distributes the 3 covered-loading overhead doors."
+    }
+  ],
+  "high_bay_geometry_check": {
+    "expected_perimeter_lf_proxy": 471.2,
+    "computed_perimeter_ft": 471.1978,
+    "expected_footprint_sf_proxy": 10630,
+    "computed_footprint_sf": 10630.0,
+    "expected_roof_top_ft": 38.9569377990431,
+    "computed_roof_top_ft": 38.9569377990431
+  },
+  "stair_opening_check": {
+    "expected_area_sf": 433,
+    "computed_area_sf": 433.5,
+    "f2_floor_ft_used": 14.0
+  },
+  "openings_summary": {
+    "placed_count": 8,
+    "unplaced_count": 15,
+    "rendered_count": 6,
+    "unplaced_elements": [
+      "NF-003",
+      "NF-004",
+      "NF-005",
+      "SF-001",
+      "SF-002",
+      "SF-003",
+      "SF-004",
+      "SF-005",
+      "SF-006",
+      "SF-007",
+      "IG-001",
+      "IG-002",
+      "IG-003",
+      "IG-004",
+      "IG-006"
+    ],
+    "placed_elements": [
+      "NF-001",
+      "NF-002",
+      "SF-008",
+      "SF-009",
+      "SF-010",
+      "SF-011",
+      "EF-001",
+      "EF-002"
+    ]
+  }
+}
