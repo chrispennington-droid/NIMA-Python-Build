@@ -1,0 +1,1036 @@
+{
+  "schema_version": "0.1.0",
+  "document_type": "partial_expanded_scope_review",
+  "merge_scope": {
+    "scope_name": "approved_expanded_extracted_scope_review_only",
+    "source_building_envelope": "code_inputs/building_envelope.json",
+    "merge_datetime": "2026-04-27T14:34:41-0500 (CDT)",
+    "full_scene_merge_ready": false,
+    "glb_regeneration_blocked": true,
+    "notes": [
+      "This artifact stages only the approved accepted geometry IDs for expanded review scope.",
+      "It is not a full-scene merge and must not be used to trigger GLB regeneration.",
+      "Locked high-bay geometry, the finalized stair-opening polygon, and sealed Existing Tyler interfaces remain reference-only context.",
+      "Unresolved NEEDS_VECTOR_CONFIRMATION items are excluded from geometry payload and carried forward in validation only."
+    ]
+  },
+  "included_geometry_ids": [
+    "F1-PLATE-PRIMARY",
+    "F2-PLATE-PRIMARY",
+    "W-F1-MAIN-ENTRY-STOREFRONT",
+    "W-F1-SOUTH-WINDOW-BAND",
+    "W-F2-NORTH-DESIGNCENTER-GLAZING",
+    "W-F1-LAB-CORRIDOR-EAST",
+    "W-F1-SUPPORT-CORRIDOR-WEST",
+    "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY",
+    "W-F2-SUPPORT-WEST",
+    "W-F2-LARGE-MEETING-EAST",
+    "W-F2-PROJECT-SOUTH",
+    "W-F2-PROG-LAB-WEST",
+    "W-F2-PALETTE-STORAGE-WEST"
+  ],
+  "included_geometry": {
+    "F1": {
+      "floor_plate_boundaries": [
+        {
+          "boundary_id": "F1-PLATE-PRIMARY",
+          "boundary_type": "primary_floor_plate",
+          "linked_wall_schedule_refs": [
+            "W-F1-MAIN-ENTRY-STOREFRONT",
+            "W-F1-SOUTH-WINDOW-BAND"
+          ],
+          "locked_interface_refs": [
+            "HB-W-004",
+            "W-F1-EXISTING-SEAL"
+          ],
+          "condition_refs": [],
+          "source_trace": [
+            "SRC-01",
+            "SRC-08"
+          ],
+          "geometry": {
+            "type": "polygon_ft",
+            "vertices": [
+              [
+                -69.184,
+                35.955
+              ],
+              [
+                -23.863,
+                39.894
+              ],
+              [
+                35.454,
+                32.594
+              ],
+              [
+                68.512,
+                1.557
+              ],
+              [
+                64.521,
+                -21.104
+              ],
+              [
+                -4.878,
+                -44.447
+              ],
+              [
+                -25.911,
+                -44.447
+              ],
+              [
+                -25.911,
+                14.003
+              ],
+              [
+                -39.513,
+                35.876
+              ],
+              [
+                -59.259,
+                17.627
+              ]
+            ],
+            "status": "EXTRACTED_PROXY",
+            "confidence": {
+              "level": "medium",
+              "score": 0.68,
+              "basis": [
+                "f1_svg_grid_calibration",
+                "layer_10_filled_polygon_trace",
+                "locked_package_feet_space_reconciliation"
+              ]
+            },
+            "extraction_notes": [
+              "First-pass F1 floor plate traced from filled occupied-zone polygons in the calibrated first-floor SVG.",
+              "This remains a proxy outer boundary until a dedicated perimeter-stroke extraction pass replaces filled-polygon tracing."
+            ]
+          }
+        }
+      ],
+      "exterior_wall_segments": [
+        {
+          "segment_id": "W-F1-MAIN-ENTRY-STOREFRONT",
+          "wall_schedule_refs": [
+            "W-F1-MAIN-ENTRY-STOREFRONT"
+          ],
+          "classification": "exterior_storefront",
+          "thickness_ft": 1.0,
+          "thickness_source": "LOCKED_STANDARD",
+          "door_refs": [
+            "GEM-F1-EXT-01"
+          ],
+          "associated_openings": [
+            {
+              "opening_id": "NF-004",
+              "parent_segment_id": "W-F1-MAIN-ENTRY-STOREFRONT",
+              "center_pt_ft": [
+                5.796,
+                36.244
+              ],
+              "distance_from_start_ft": 29.882,
+              "width_ft": 8.8,
+              "height_ft": 30.4,
+              "placement_status": "MIDPOINT_FALLBACK",
+              "placement_confidence": "low",
+              "review_flags": [
+                "LOW_CONFIDENCE_REVIEW"
+              ],
+              "placement_note": "No schedule centerpoint or SVG/vector evidence found; temporary midpoint fallback used."
+            }
+          ],
+          "window_facade_refs": [
+            "NF-004",
+            "SF-004"
+          ],
+          "material_zone_ref": "MAT-STOREFRONT",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08",
+            "SRC-09"
+          ],
+          "extraction_status": "EXTRACTED_PROXY",
+          "confidence": {
+            "level": "medium",
+            "score": 0.72,
+            "basis": [
+              "f1_svg_grid_calibration",
+              "layer_10_filled_polygon_trace",
+              "wall_schedule_alignment"
+            ]
+          },
+          "segment_length_ft": 59.764,
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                -23.863,
+                39.894
+              ],
+              [
+                35.454,
+                32.594
+              ]
+            ],
+            "status": "EXTRACTED_PROXY",
+            "confidence": {
+              "level": "medium",
+              "score": 0.72,
+              "basis": [
+                "f1_svg_grid_calibration",
+                "layer_10_filled_polygon_trace",
+                "wall_schedule_alignment"
+              ]
+            },
+            "extraction_notes": [
+              "Proxy storefront segment extracted from the calibrated F1 SVG occupied-zone edge.",
+              "NF-004 was placed as a fallback midpoint opening on this pass; SF-004 and GEM-F1-EXT-01 remain schedule-associated refs pending higher-confidence vector placement."
+            ]
+          }
+        },
+        {
+          "segment_id": "W-F1-SOUTH-WINDOW-BAND",
+          "wall_schedule_refs": [
+            "W-F1-SOUTH-WINDOW-BAND"
+          ],
+          "classification": "exterior",
+          "thickness_ft": 1.0,
+          "thickness_source": "LOCKED_STANDARD",
+          "door_refs": [],
+          "associated_openings": [
+            {
+              "opening_id": "SF-002",
+              "parent_segment_id": "W-F1-SOUTH-WINDOW-BAND",
+              "center_pt_ft": [
+                -15.395,
+                -44.447
+              ],
+              "distance_from_start_ft": 10.517,
+              "width_ft": 12.8,
+              "height_ft": 4.8,
+              "placement_status": "MIDPOINT_FALLBACK",
+              "placement_confidence": "low",
+              "review_flags": [
+                "LOW_CONFIDENCE_REVIEW"
+              ],
+              "placement_note": "No schedule centerpoint or SVG/vector evidence found; temporary midpoint fallback used."
+            }
+          ],
+          "window_facade_refs": [
+            "SF-002"
+          ],
+          "material_zone_ref": "MAT-NEW-GENERAL",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08",
+            "SRC-09"
+          ],
+          "extraction_status": "EXTRACTED_PROXY",
+          "confidence": {
+            "level": "medium",
+            "score": 0.58,
+            "basis": [
+              "f1_svg_grid_calibration",
+              "layer_10_filled_polygon_trace",
+              "wall_schedule_alignment"
+            ]
+          },
+          "segment_length_ft": 21.033,
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                -25.911,
+                -44.447
+              ],
+              [
+                -4.878,
+                -44.447
+              ]
+            ],
+            "status": "EXTRACTED_PROXY",
+            "confidence": {
+              "level": "medium",
+              "score": 0.58,
+              "basis": [
+                "f1_svg_grid_calibration",
+                "layer_10_filled_polygon_trace",
+                "wall_schedule_alignment"
+              ]
+            },
+            "extraction_notes": [
+              "This south-facing proxy wall is the weakest of the three first-pass exterior segments and should be revisited with explicit perimeter-stroke extraction.",
+              "SF-002 was placed as a fallback midpoint opening because no better centerpoint evidence was verified in this pass."
+            ]
+          }
+        }
+      ],
+      "interior_parent_wall_segments": [
+        {
+          "segment_id": "W-F1-LAB-CORRIDOR-EAST",
+          "wall_schedule_refs": [
+            "W-F1-LAB-CORRIDOR-EAST"
+          ],
+          "classification": "interior_parent_wall",
+          "thickness_ft": 0.4167,
+          "opening_parent_only": true,
+          "door_refs": [
+            "F1-AAA",
+            "F1-AAB",
+            "F1-AAC",
+            "F1-AAD"
+          ],
+          "material_zone_ref": "MAT-NEW-GENERAL",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08"
+          ],
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                -26.213,
+                14.555
+              ],
+              [
+                -26.213,
+                -44.499
+              ]
+            ],
+            "status": "EXTRACTED",
+            "confidence": {
+              "level": "medium",
+              "score": 0.83,
+              "basis": [
+                "parent_wall_schedule_exists",
+                "door_coordination_exists",
+                "f1_svg_vector_wall_body",
+                "f1_svg_preview_verification",
+                "package_grid_calibration"
+              ]
+            },
+            "extraction_notes": [
+              "Extracted from a continuous vertical wall-body vector in the F1 SVG aligned to the Laser, Microscopy, XRay, and Clean Room stack.",
+              "Preview verification confirmed this wall as the east boundary of the lab corridor zone.",
+              "Door refs remain attached for later opening placement from schedule centerpoints or direct vector evidence."
+            ]
+          }
+        },
+        {
+          "segment_id": "W-F1-SUPPORT-CORRIDOR-WEST",
+          "wall_schedule_refs": [
+            "W-F1-SUPPORT-CORRIDOR-WEST"
+          ],
+          "classification": "interior_parent_wall",
+          "thickness_ft": 0.4167,
+          "opening_parent_only": true,
+          "door_refs": [
+            "F1-AAH",
+            "F1-AAG",
+            "F1-AAF",
+            "F1-AAE"
+          ],
+          "material_zone_ref": "MAT-NEW-GENERAL",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08"
+          ],
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                -46.405,
+                3.474
+              ],
+              [
+                -46.405,
+                -45.813
+              ]
+            ],
+            "status": "EXTRACTED",
+            "confidence": {
+              "level": "medium",
+              "score": 0.77,
+              "basis": [
+                "parent_wall_schedule_exists",
+                "door_coordination_exists",
+                "f1_svg_vector_wall_body",
+                "f1_svg_preview_verification",
+                "package_grid_calibration"
+              ]
+            },
+            "extraction_notes": [
+              "Extracted from a vertically aligned F1 SVG wall-body vector stack centered at approximately x = 1866.337 SVG units.",
+              "The preview and source linework support this as the west organizer wall for the support-corridor room stack, with door/opening interruptions to be coordinated later from schedule references.",
+              "Door refs remain attached for later opening placement from schedule centerpoints or direct vector evidence."
+            ]
+          }
+        }
+      ]
+    },
+    "F2": {
+      "floor_plate_boundaries": [
+        {
+          "boundary_id": "F2-PLATE-PRIMARY",
+          "boundary_type": "primary_floor_plate",
+          "linked_wall_schedule_refs": [
+            "W-F2-NORTH-DESIGNCENTER-GLAZING",
+            "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY"
+          ],
+          "locked_interface_refs": [
+            "HB-W-001",
+            "HB-W-002",
+            "HB-W-004"
+          ],
+          "void_refs": [],
+          "condition_refs": [],
+          "source_trace": [
+            "SRC-01",
+            "SRC-08",
+            "SRC-10"
+          ],
+          "geometry": {
+            "type": "polygon_ft",
+            "vertices": [
+              [
+                -26.407,
+                13.237
+              ],
+              [
+                1.936,
+                13.553
+              ],
+              [
+                9.555,
+                39.734
+              ],
+              [
+                33.416,
+                43.162
+              ],
+              [
+                70.618,
+                12.913
+              ],
+              [
+                68.509,
+                1.211
+              ],
+              [
+                60.336,
+                -45.189
+              ],
+              [
+                30.991,
+                -45.426
+              ],
+              [
+                -26.407,
+                -45.453
+              ]
+            ],
+            "status": "EXTRACTED_PROXY",
+            "confidence": {
+              "level": "medium",
+              "score": 0.66,
+              "basis": [
+                "f2_svg_grid_calibration",
+                "layer_1_copy_filled_polygon_trace",
+                "locked_hb_interface_reconciliation"
+              ]
+            },
+            "extraction_notes": [
+              "First-pass F2 floor plate traced from filled occupied-zone polygons in the calibrated second-floor SVG.",
+              "The east interface vertices were reconciled onto the locked high-bay west boundary to preserve the HB keep-out condition.",
+              "This remains a proxy outer boundary until a dedicated perimeter-stroke extraction pass replaces filled-polygon tracing."
+            ]
+          }
+        }
+      ],
+      "exterior_wall_segments": [
+        {
+          "segment_id": "W-F2-NORTH-DESIGNCENTER-GLAZING",
+          "wall_schedule_refs": [
+            "W-F2-NORTH-DESIGNCENTER-GLAZING"
+          ],
+          "classification": "exterior",
+          "thickness_ft": 1.0,
+          "thickness_source": "LOCKED_STANDARD",
+          "door_refs": [],
+          "associated_openings": [
+            {
+              "opening_id": "NF-003",
+              "parent_segment_id": "W-F2-NORTH-DESIGNCENTER-GLAZING",
+              "center_pt_ft": [
+                42.663,
+                35.641
+              ],
+              "distance_from_start_ft": 36.027,
+              "width_ft": 62.4,
+              "height_ft": 23.2,
+              "placement_status": "MIDPOINT_FALLBACK",
+              "placement_confidence": "low",
+              "review_flags": [
+                "LOW_CONFIDENCE_REVIEW"
+              ],
+              "placement_note": "No schedule centerpoint or SVG/vector evidence found; temporary midpoint fallback used."
+            }
+          ],
+          "window_facade_refs": [
+            "NF-003"
+          ],
+          "material_zone_ref": "MAT-NEW-GENERAL",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08",
+            "SRC-09"
+          ],
+          "extraction_status": "EXTRACTED_PROXY",
+          "confidence": {
+            "level": "medium",
+            "score": 0.7,
+            "basis": [
+              "f2_svg_grid_calibration",
+              "layer_1_copy_filled_polygon_trace",
+              "wall_schedule_alignment",
+              "locked_hb_interface_reconciliation"
+            ]
+          },
+          "segment_length_ft": 72.054,
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                9.555,
+                39.734
+              ],
+              [
+                33.416,
+                43.162
+              ],
+              [
+                70.618,
+                12.913
+              ]
+            ],
+            "status": "EXTRACTED_PROXY",
+            "confidence": {
+              "level": "medium",
+              "score": 0.7,
+              "basis": [
+                "f2_svg_grid_calibration",
+                "layer_1_copy_filled_polygon_trace",
+                "wall_schedule_alignment",
+                "locked_hb_interface_reconciliation"
+              ]
+            },
+            "extraction_notes": [
+              "Proxy north glazing wall extracted from the calibrated F2 SVG occupied-zone boundary.",
+              "The east endpoint was reconciled onto the locked high-bay west boundary to preserve the high-bay keep-out condition."
+            ]
+          }
+        }
+      ],
+      "interior_parent_wall_segments": [
+        {
+          "segment_id": "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY",
+          "wall_schedule_refs": [
+            "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY"
+          ],
+          "classification": "guard_edge_parent",
+          "thickness_ft": 0.4167,
+          "segment_role": "guard_edge_not_full_wall",
+          "opening_parent_only": false,
+          "door_refs": [],
+          "window_facade_refs": [
+            "IG-006"
+          ],
+          "material_zone_ref": "MAT-OVERLOOK",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08",
+            "SRC-09"
+          ],
+          "provenance": "DERIVED_FROM_STAIR_POLYGON_EDGE",
+          "review_flags": [
+            "CONFIRM_AGAINST_F2_SVG_BEFORE_LOCKING"
+          ],
+          "provenance_note": "Uses V2-V3 east edge of finalized stair/open-to-lobby polygon as the guard/open-edge boundary. Accepted for current extracted scope, but should not be treated as a separate locked high-bay overlook boundary until confirmed against F2 SVG/vector evidence.",
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                72.3,
+                36.6
+              ],
+              [
+                71.8,
+                22.0
+              ]
+            ],
+            "status": "EXTRACTED",
+            "confidence": {
+              "level": "medium",
+              "score": 0.82,
+              "basis": [
+                "master_wall_row_exists",
+                "overlook_edge_facade_ref_exists",
+                "f2_svg_preview_verification",
+                "locked_stair_opening_edge_reference",
+                "package_grid_calibration"
+              ]
+            },
+            "extraction_notes": [
+              "F2 SVG preview verification confirmed that the High-Bay Overlook-facing side of the OPEN TO LOBBY BELOW polygon is the relevant guard/open-edge boundary for this segment.",
+              "To preserve read-only geometry, this extracted segment inherits the east edge of the finalized locked stair/open-to-lobby opening polygon rather than redrawing a separate proxy line.",
+              "This segment remains a guard/open-edge boundary and not a standard full-height wall."
+            ]
+          }
+        },
+        {
+          "segment_id": "W-F2-SUPPORT-WEST",
+          "wall_schedule_refs": [
+            "W-F2-SUPPORT-WEST"
+          ],
+          "classification": "interior_parent_wall",
+          "thickness_ft": 0.4167,
+          "thickness_source": "LOCKED_STANDARD",
+          "opening_parent_only": true,
+          "door_refs": [
+            "F2-ABF",
+            "F2-ABG",
+            "F2-ABH"
+          ],
+          "material_zone_ref": "MAT-NEW-GENERAL",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08"
+          ],
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                1.936,
+                -33.193
+              ],
+              [
+                1.936,
+                -45.453
+              ]
+            ],
+            "status": "EXTRACTED",
+            "confidence": {
+              "level": "medium",
+              "score": 0.78,
+              "basis": [
+                "source_wall_schedule_row_exists",
+                "door_coordination_rows_exist",
+                "f2_svg_preview_support_stack_alignment",
+                "f2_svg_single_vertical_wall_body_pair_confirmed",
+                "paired_line_centerline_reconciled_into_package_feet_space",
+                "package_grid_calibration"
+              ]
+            },
+            "extraction_notes": [
+              "Extracted from a single defensible vertical wall-body pair on the west side of the SM MEETING / IDF / ELEC support stack in the F2 SVG.",
+              "The extracted centerline uses the midpoint of the confirmed paired vertical wall-body traces and does not derive thickness from SVG line weight.",
+              "Door refs remain attached for later opening placement from schedule centerpoints or direct vector evidence."
+            ]
+          }
+        },
+        {
+          "segment_id": "W-F2-LARGE-MEETING-EAST",
+          "wall_schedule_refs": [
+            "W-F2-LARGE-MEETING-EAST"
+          ],
+          "classification": "interior_parent_wall",
+          "thickness_ft": 0.4167,
+          "thickness_source": "LOCKED_STANDARD",
+          "opening_parent_only": true,
+          "door_refs": [
+            "F2-ABL"
+          ],
+          "material_zone_ref": "MAT-NEW-GENERAL",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08"
+          ],
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                14.789,
+                0.713
+              ],
+              [
+                14.789,
+                -25.705
+              ]
+            ],
+            "status": "EXTRACTED",
+            "confidence": {
+              "level": "medium",
+              "score": 0.76,
+              "basis": [
+                "source_wall_schedule_row_exists",
+                "door_coordination_row_exists",
+                "f2_svg_continuous_vertical_wall_body_polygon_confirmed",
+                "adjacent_lab_polygon_west_edge_crosscheck",
+                "double_door_folding_wall_context_reviewed",
+                "centerline_derived_from_confirmed_wall_body_polygon_midline",
+                "package_grid_calibration"
+              ]
+            },
+            "extraction_notes": [
+              "Extracted from the continuous vertical wall-body polygon confirmed at the large-meeting east edge in the F2 SVG, with the adjacent east-side lab polygon using the same boundary as its west edge.",
+              "The extracted centerline uses the midpoint of the confirmed wall-body polygon edges and does not derive wall thickness from SVG line weight; interior thickness remains the locked 0.4167 ft standard.",
+              "The nearby double-door and folding-wall context was reviewed before extraction; door ref F2-ABL remains attached for later opening placement without any placement change in this pass."
+            ]
+          }
+        },
+        {
+          "segment_id": "W-F2-PROJECT-SOUTH",
+          "wall_schedule_refs": [
+            "W-F2-PROJECT-SOUTH"
+          ],
+          "classification": "interior_parent_wall",
+          "thickness_ft": 0.4167,
+          "thickness_source": "LOCKED_STANDARD",
+          "opening_parent_only": true,
+          "door_refs": [
+            "F2-ABM",
+            "F2-ABN"
+          ],
+          "material_zone_ref": "MAT-NEW-GENERAL",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08"
+          ],
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                2.397,
+                2.638
+              ],
+              [
+                11.242,
+                1.07
+              ]
+            ],
+            "status": "EXTRACTED",
+            "confidence": {
+              "level": "medium",
+              "score": 0.77,
+              "basis": [
+                "source_wall_schedule_row_exists",
+                "door_coordination_rows_exist",
+                "f2_svg_project_room_south_wall_body_pair_confirmed",
+                "continuous_diagonal_parent_wall_trace_confirmed",
+                "centerline_derived_from_confirmed_wall_body_pair_midline",
+                "package_grid_calibration"
+              ]
+            },
+            "extraction_notes": [
+              "Extracted from the continuous diagonal wall-body pair confirmed along the south edge of the two project rooms in the F2 SVG.",
+              "The extracted centerline uses the midpoint of the confirmed paired diagonal wall-body traces and does not derive wall thickness from SVG line weight; interior thickness remains the locked 0.4167 ft standard.",
+              "Door refs F2-ABM and F2-ABN remain attached for later opening placement without any placement change in this pass."
+            ]
+          }
+        },
+        {
+          "segment_id": "W-F2-PROG-LAB-WEST",
+          "wall_schedule_refs": [
+            "W-F2-PROG-LAB-WEST"
+          ],
+          "classification": "interior_parent_wall",
+          "thickness_ft": 0.4167,
+          "thickness_source": "LOCKED_STANDARD",
+          "opening_parent_only": true,
+          "door_refs": [
+            "F2-ABO",
+            "F2-ABP",
+            "F2-ABQ",
+            "F2-ABR",
+            "F2-ABS"
+          ],
+          "material_zone_ref": "MAT-NEW-GENERAL",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08"
+          ],
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                47.113,
+                5.063
+              ],
+              [
+                38.927,
+                -41.445
+              ]
+            ],
+            "status": "EXTRACTED",
+            "confidence": {
+              "level": "medium",
+              "score": 0.75,
+              "basis": [
+                "source_wall_schedule_row_exists",
+                "door_coordination_rows_exist",
+                "f2_svg_prog_mgr_lab_west_edge_segment_chain_confirmed",
+                "filled_polygon_west_edge_crosscheck",
+                "continuous_diagonal_parent_wall_slope_consistency_confirmed",
+                "centerline_derived_from_confirmed_wall_body_pair_midline",
+                "package_grid_calibration"
+              ]
+            },
+            "extraction_notes": [
+              "Extracted from the confirmed diagonal west-edge wall-body segment chain running from the program-manager top through the stacked lab row in the F2 SVG.",
+              "The extracted centerline uses the midpoint of the confirmed paired diagonal wall-body traces and filled-polygon edge crosscheck, and does not derive wall thickness from SVG line weight; interior thickness remains the locked 0.4167 ft standard.",
+              "Door refs F2-ABO through F2-ABS remain attached for later opening placement without any placement change in this pass."
+            ]
+          }
+        },
+        {
+          "segment_id": "W-F2-PALETTE-STORAGE-WEST",
+          "wall_schedule_refs": [
+            "W-F2-PALETTE-STORAGE-WEST"
+          ],
+          "classification": "interior_parent_wall",
+          "thickness_ft": 0.4167,
+          "thickness_source": "LOCKED_STANDARD",
+          "opening_parent_only": true,
+          "door_refs": [
+            "F2-ABV"
+          ],
+          "material_zone_ref": "MAT-HIGHBAY",
+          "source_trace": [
+            "SRC-01",
+            "SRC-08"
+          ],
+          "geometry": {
+            "type": "polyline_ft",
+            "vertices": [
+              [
+                65.095,
+                -23.135
+              ],
+              [
+                61.179,
+                -45.374
+              ]
+            ],
+            "status": "EXTRACTED",
+            "confidence": {
+              "level": "medium",
+              "score": 0.73,
+              "basis": [
+                "source_wall_schedule_row_exists",
+                "door_coordination_row_exists",
+                "high_bay_support_finish_context_locked",
+                "source_door_ref_overlap_still_flagged",
+                "f2_svg_palette_storage_west_wall_body_pair_confirmed",
+                "continuous_diagonal_parent_wall_trace_confirmed",
+                "centerline_derived_from_confirmed_wall_body_pair_midline",
+                "package_grid_calibration"
+              ]
+            },
+            "extraction_notes": [
+              "Extracted from the confirmed diagonal wall-body pair forming the west edge of the palette-storage room in the F2 SVG high-bay-adjacent cluster.",
+              "The extracted centerline uses the midpoint of the confirmed paired diagonal wall-body traces and does not derive wall thickness from SVG line weight; interior thickness remains the locked 0.4167 ft standard and MAT-HIGHBAY material logic remains unchanged.",
+              "Door ref F2-ABV remains attached for later opening placement, and its source overlap with W-F2-MEZZ-STOR-WEST remains flagged under source-normalization review; this extraction does not resolve, reassign, or normalize that overlap."
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "read_only_context_refs": {
+    "high_bay": {
+      "ref_path": "locked_read_only_context.high_bay",
+      "source_ref": "code_inputs/high_bay_geometry.json",
+      "geometry_lock_refs": [
+        "GEO-001",
+        "GEO-002",
+        "GEO-003",
+        "GEO-005"
+      ],
+      "status": "LOCKED_READ_ONLY_REFERENCE"
+    },
+    "stair_opening": {
+      "ref_path": "locked_read_only_context.stair_opening",
+      "source_ref": "code_inputs/stair_opening_polygon.json",
+      "opening_id": "OV-F2-STAIR-OPENING",
+      "geometry_lock_refs": [
+        "GEO-004",
+        "GEO-007"
+      ],
+      "status": "LOCKED_READ_ONLY_REFERENCE"
+    },
+    "sealed_existing_tyler_refs": [
+      {
+        "segment_id": "W-F1-EXISTING-SEAL",
+        "ref_path": "levels.F1.interior_parent_wall_segments[5]",
+        "status": "REFERENCE_ONLY"
+      },
+      {
+        "segment_id": "W-F2-EXISTING-SEAL",
+        "ref_path": "levels.F2.interior_parent_wall_segments[1]",
+        "status": "REFERENCE_ONLY"
+      }
+    ]
+  },
+  "validation_carry_forward": {
+    "unresolved_item_ids": [
+      "W-F1-CONNECTOR-CLOSE",
+      "W-F1-OFFICE-CORRIDOR-WEST",
+      "W-F1-RR-JAN-NORTH",
+      "CND-F1-ABY",
+      "W-F2-LAB-CORRIDOR-EAST",
+      "W-F2-RESEARCH-NORTH",
+      "W-F2-MEZZ-STOR-WEST",
+      "W-F2-STAIR-CORRIDOR",
+      "CND-F2-ABW",
+      "CND-F2-AAU",
+      "CND-F2-OPEN-LOBBY",
+      "CND-F2-LOADING-BELOW",
+      "CND-F2-TERRACE"
+    ],
+    "unresolved_items": [
+      {
+        "item_id": "W-F1-CONNECTOR-CLOSE",
+        "item_kind": "wall_segment",
+        "item_type": "interior_parent_wall",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F1 SVG and temporary local preview identified the likely connector/lobby closure zone near Secure Access and the 2-Story Lobby, but the exact parent-wall extent for W-F1-CONNECTOR-CLOSE remains visually ambiguous because adjacent room partitions, grid overlays, and annotation overlap prevent a defensible single-segment trace from being verified.",
+        "next_extraction_step": "Use a targeted crop or isolated vector decomposition of the Secure Access / Lobby connector zone in the F1 SVG, then trace only the confirmed W-F1-CONNECTOR-CLOSE parent wall line without inferring geometry from neighboring partitions."
+      },
+      {
+        "item_id": "W-F1-OFFICE-CORRIDOR-WEST",
+        "item_kind": "wall_segment",
+        "item_type": "interior_parent_wall",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F1 SVG and focused plan preview narrowed W-F1-OFFICE-CORRIDOR-WEST to the conference/meeting/lounge side of the office-support wing, but the visible linework splits into multiple plausible vertical candidates and does not cleanly identify a single defensible parent-wall run without risking contamination from adjacent room edges.",
+        "next_extraction_step": "Use a tighter vector isolation or higher-fidelity crop of the office-support wing around the conference, meeting, and lounge interface, then confirm which vertical organizer wall carries door refs F1-AAJ, F1-AAK, F1-AAO, and F1-AAM before tracing numeric vertices."
+      },
+      {
+        "item_id": "W-F1-RR-JAN-NORTH",
+        "item_kind": "wall_segment",
+        "item_type": "interior_parent_wall",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F1 SVG and preview evidence isolate the RR/JAN area, but the visible north-edge linework breaks into multiple disjoint horizontal candidates across the RR pair and JAN room and does not confirm a single defensible parent-wall run for W-F1-RR-JAN-NORTH without risking an invented cross-gap connection.",
+        "next_extraction_step": "Use a tighter vector isolation of the RR, RR, and JAN cluster to determine whether W-F1-RR-JAN-NORTH should be represented as a single confirmed segment, a reviewed proxy decomposition, or remain unresolved pending more authoritative geometry."
+      },
+      {
+        "item_id": "CND-F1-ABY",
+        "item_kind": "condition",
+        "item_type": "second_story_only_cover_strip",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The schedule row and the paired F1/F2 SVG previews consistently indicate that F1-ABY is a solid second-story-only overhead/slab-cover condition over the entrance / 2-story-lobby relationship, not an occupiable room or floor-plate extension. However, the F1-side connector/canopy boundaries do not resolve into one clean standalone polygon that can be separated confidently from the adjacent entrance apron, lobby edge, and the already ambiguous F2 cover/open-lobby band context.",
+        "next_extraction_step": "Use a tighter F1/F2 vector isolation or another authoritative overhead-condition source to determine whether the second-story-only cover strip has explicit polygon corners distinct from the entrance and lobby edges; preserve it as overhead/non-occupiable and coordinate with the related stair/cover-band context before assigning vertices."
+      },
+      {
+        "item_id": "W-F2-LAB-CORRIDOR-EAST",
+        "item_kind": "wall_segment",
+        "item_type": "interior_parent_wall",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG preview and vector inspection both point to the likely corridor-organizer wall along the east side of the stacked lab/support room band, and the SVG contains recurring vertical wall-body pairs centered near approximately x = -4.98 ft in package space, but the visible linework breaks into multiple segmented runs and an ambiguous continuity/junction near the storage/itinerant-to-lab transition. That evidence is not yet strong enough to prove a single defensible parent-wall trace carrying all six door refs F2-AAZ through F2-ABE without inference.",
+        "next_extraction_step": "Use a tighter F2 SVG/vector isolation of the storage, itinerant, and lab room stack and confirm whether one continuous parent wall line or multiple distinct parent-wall segments are actually present before assigning numeric vertices."
+      },
+      {
+        "item_id": "W-F2-RESEARCH-NORTH",
+        "item_kind": "wall_segment",
+        "item_type": "interior_parent_wall",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG preview and vector inspection both point to the likely north organizer wall above the three research offices, and the SVG contains aligned paired horizontal wall-body candidates centered near approximately y = -45.48 ft in package space. However, the visible linework resolves as two discrete spans with a small gap near the middle/right office junction rather than one unambiguous continuous parent-wall run across all three door-related offices. That evidence is not yet strong enough to collapse the spans into a single extracted parent wall carrying door refs F2-ABI through F2-ABK without inference.",
+        "next_extraction_step": "Use a tighter F2 SVG/vector isolation around the full three-office research row and confirm whether the split horizontal spans represent one continuous parent wall across door interruptions or multiple distinct parent-wall segments before assigning numeric vertices."
+      },
+      {
+        "item_id": "W-F2-MEZZ-STOR-WEST",
+        "item_kind": "wall_segment",
+        "item_type": "interior_parent_wall",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG confirms the mezzanine-storage / palette-storage cluster in the east high-bay-adjacent zone, but the visible diagonal wall-body chains there resolve as shared mezz/palette boundary context rather than one clean standalone mezzanine-storage west wall with defensible numeric endpoints. Because the source workbook also overlaps door ref F2-ABV with W-F2-PALETTE-STORAGE-WEST, promoting one of those shared diagonal traces to W-F2-MEZZ-STOR-WEST in this pass would risk double-drawing or misassigning the parent wall.",
+        "next_extraction_step": "Use a tighter F2 SVG/vector isolation around the mezzanine-storage room only, confirm whether a short standalone west wall exists separate from the adjacent palette-storage west-edge chain, and keep the F2-ABV overlap under source-normalization review against W-F2-PALETTE-STORAGE-WEST before assigning numeric vertices."
+      },
+      {
+        "item_id": "W-F2-STAIR-CORRIDOR",
+        "item_kind": "wall_segment",
+        "item_type": "interior_parent_wall",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG, focused stair-area preview, and source coordination row confirm the stair/open-to-lobby cutout context and the existence of a corridor-side wall reference, but the visible candidate linework in that zone merges with the locked opening edge, guard/open-below boundary context, and adjacent terrace/overlook geometry instead of isolating one standalone stair-corridor wall-body line with defensible numeric endpoints. Under the locked-stair rules, promoting any of those shared edges would risk reusing opening geometry as a wall or intersecting the finalized stair-opening polygon.",
+        "next_extraction_step": "Use a tighter F2 SVG/vector isolation or other authoritative corridor-side wall source to confirm a parent wall line that is adjacent to, but numerically separate from, the finalized stair-opening polygon before assigning vertices; preserve the locked opening as read-only context and do not generate stair geometry."
+      },
+      {
+        "item_id": "CND-F2-ABW",
+        "item_kind": "condition",
+        "item_type": "canopy_slab_over_covered_loading",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG and focused preview confirm the loading-below relationship at this location, and the F1 SVG confirms the covered-loading footprint below, but the F2 plan does not isolate a distinct canopy/slab polygon with defensible numeric corners separate from adjacent loading-below and phase-expansion linework.",
+        "next_extraction_step": "Use an isolated F2 vector crop or other authoritative overhead-condition source to distinguish the CND-F2-ABW canopy/slab footprint from the CND-F2-LOADING-BELOW relationship before assigning polygon vertices."
+      },
+      {
+        "item_id": "CND-F2-AAU",
+        "item_kind": "condition",
+        "item_type": "entry_canopy_roof_cover_band",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG and focused preview show the entry / roof-cover relationship above the lobby edge, and the F1 SVG cross-check confirms the new-entry / two-story-lobby context below, but the F2 plan does not isolate a standalone canopy-band polygon with defensible numeric corners separate from the adjacent covered-terrace and open-lobby-below geometry.",
+        "next_extraction_step": "Use an isolated F2 vector crop or other authoritative overhead-condition source to separate the CND-F2-AAU roof-cover band from the adjacent CND-F2-TERRACE and CND-F2-OPEN-LOBBY conditions before assigning polygon vertices."
+      },
+      {
+        "item_id": "CND-F2-OPEN-LOBBY",
+        "item_kind": "condition",
+        "item_type": "open_to_lobby_below_void",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG and focused preview confirm the open-to-lobby-below relationship in this area, but the clearly bounded visible polygon corresponds to the already finalized stair-opening proxy, and the plan does not isolate a separate broader lobby-below void polygon with defensible numeric corners beyond that locked opening context.",
+        "next_extraction_step": "Use an isolated F2 vector crop or other authoritative void-condition source to distinguish any broader CND-F2-OPEN-LOBBY extent from the locked CND-F2-AAT stair-opening polygon before assigning polygon vertices."
+      },
+      {
+        "item_id": "CND-F2-LOADING-BELOW",
+        "item_kind": "condition",
+        "item_type": "open_below_covered_loading_relationship",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG and focused preview confirm the loading-below relationship in this southeast zone, and the F1 SVG cross-check confirms the covered-loading footprint below, but the F2 plan does not isolate a standalone loading-below void polygon with defensible numeric corners separate from adjacent phase-expansion and canopy-context linework.",
+        "next_extraction_step": "Use an isolated F2 vector crop or other authoritative void-condition source to distinguish the CND-F2-LOADING-BELOW relationship from adjacent CND-F2-ABW canopy and phase-expansion context before assigning polygon vertices."
+      },
+      {
+        "item_id": "CND-F2-TERRACE",
+        "item_kind": "condition",
+        "item_type": "covered_terrace_condition",
+        "status": "NEEDS_VECTOR_CONFIRMATION",
+        "reason_empty": "The F2 SVG and focused preview identify the covered-terrace band in the north connector zone, but the exact standalone terrace footprint is not cleanly isolated with defensible numeric corner returns separate from adjacent project-room wall segments, canopy-band context, and overlook/open-below edgework.",
+        "next_extraction_step": "Use an isolated F2 vector crop or other authoritative exterior-condition source to separate the CND-F2-TERRACE footprint from adjacent canopy, project-room, and open-below geometry before assigning polygon vertices."
+      }
+    ],
+    "source_normalization_flags": [
+      "F2-ABV overlap remains unresolved between W-F2-MEZZ-STOR-WEST and W-F2-PALETTE-STORAGE-WEST."
+    ],
+    "unresolved_items_promoted": false,
+    "merge_ready_for_current_extracted_scope": true,
+    "overall_readiness_note": "The current extracted subset passes the required validation gate. Full scene merge readiness still depends on completing the remaining pending envelope, parent-wall, and condition geometry.",
+    "full_scene_merge_ready": false,
+    "glb_regeneration_blocked": true
+  },
+  "topology_assertions": {
+    "associated_openings_must_remain_nested": [
+      "NF-004 under W-F1-MAIN-ENTRY-STOREFRONT",
+      "SF-002 under W-F1-SOUTH-WINDOW-BAND",
+      "NF-003 under W-F2-NORTH-DESIGNCENTER-GLAZING"
+    ],
+    "required_fallback_metadata": [
+      "placement_status=MIDPOINT_FALLBACK",
+      "placement_confidence=low",
+      "review_flags=[LOW_CONFIDENCE_REVIEW]",
+      "distance_from_start_ft preserved"
+    ]
+  },
+  "validation_gate_snapshot": {
+    "merge_ready_for_current_extracted_scope": true,
+    "total_checks": 12,
+    "passing_checks": 12,
+    "all_checks_pass": true,
+    "overall_readiness_note": "The current extracted subset passes the required validation gate. Full scene merge readiness still depends on completing the remaining pending envelope, parent-wall, and condition geometry."
+  }
+}

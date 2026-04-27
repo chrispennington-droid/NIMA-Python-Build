@@ -1,0 +1,333 @@
+{
+  "document_type": "partial_mvp_spatial_review_manifest",
+  "labels": [
+    "PARTIAL MVP SPATIAL-REVIEW BUILD",
+    "NOT FINAL",
+    "NOT FULL-SCENE MERGE",
+    "UNRESOLVED GEOMETRY EXCLUDED",
+    "GENERATED FROM scene_partial_expanded_scope_review.json ONLY",
+    "REMAINING UNRESOLVED ITEMS REQUIRE MANUAL VECTOR CONFIRMATION OR LATER EXPLICIT PROXY APPROVAL"
+  ],
+  "source_artifact": "code_inputs/scene_partial_expanded_scope_review.json",
+  "output_files": [
+    "build_outputs/partial_mvp_spatial_review/partial_mvp_spatial_review_scene.json",
+    "build_outputs/partial_mvp_spatial_review/partial_mvp_spatial_review_plan.svg",
+    "build_outputs/partial_mvp_spatial_review/PARTIAL_MVP_SPATIAL_REVIEW_BUILD_MANIFEST.json",
+    "build_outputs/partial_mvp_spatial_review/README_PARTIAL_MVP_SPATIAL_REVIEW.md"
+  ],
+  "included_geometry_ids": [
+    "F1-PLATE-PRIMARY",
+    "F2-PLATE-PRIMARY",
+    "W-F1-MAIN-ENTRY-STOREFRONT",
+    "W-F1-SOUTH-WINDOW-BAND",
+    "W-F2-NORTH-DESIGNCENTER-GLAZING",
+    "W-F1-LAB-CORRIDOR-EAST",
+    "W-F1-SUPPORT-CORRIDOR-WEST",
+    "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY",
+    "W-F2-SUPPORT-WEST",
+    "W-F2-LARGE-MEETING-EAST",
+    "W-F2-PROJECT-SOUTH",
+    "W-F2-PROG-LAB-WEST",
+    "W-F2-PALETTE-STORAGE-WEST"
+  ],
+  "excluded_unresolved_ids": [
+    "W-F1-CONNECTOR-CLOSE",
+    "W-F1-OFFICE-CORRIDOR-WEST",
+    "W-F1-RR-JAN-NORTH",
+    "CND-F1-ABY",
+    "W-F2-LAB-CORRIDOR-EAST",
+    "W-F2-RESEARCH-NORTH",
+    "W-F2-MEZZ-STOR-WEST",
+    "W-F2-STAIR-CORRIDOR",
+    "CND-F2-ABW",
+    "CND-F2-AAU",
+    "CND-F2-OPEN-LOBBY",
+    "CND-F2-LOADING-BELOW",
+    "CND-F2-TERRACE"
+  ],
+  "read_only_context_refs": {
+    "high_bay": {
+      "ref_path": "locked_read_only_context.high_bay",
+      "source_ref": "code_inputs/high_bay_geometry.json",
+      "geometry_lock_refs": [
+        "GEO-001",
+        "GEO-002",
+        "GEO-003",
+        "GEO-005"
+      ],
+      "status": "LOCKED_READ_ONLY_REFERENCE"
+    },
+    "stair_opening": {
+      "ref_path": "locked_read_only_context.stair_opening",
+      "source_ref": "code_inputs/stair_opening_polygon.json",
+      "opening_id": "OV-F2-STAIR-OPENING",
+      "geometry_lock_refs": [
+        "GEO-004",
+        "GEO-007"
+      ],
+      "status": "LOCKED_READ_ONLY_REFERENCE"
+    },
+    "sealed_existing_tyler_refs": [
+      {
+        "segment_id": "W-F1-EXISTING-SEAL",
+        "ref_path": "levels.F1.interior_parent_wall_segments[5]",
+        "status": "REFERENCE_ONLY"
+      },
+      {
+        "segment_id": "W-F2-EXISTING-SEAL",
+        "ref_path": "levels.F2.interior_parent_wall_segments[1]",
+        "status": "REFERENCE_ONLY"
+      }
+    ]
+  },
+  "validation": {
+    "included_ids": [
+      "F1-PLATE-PRIMARY",
+      "F2-PLATE-PRIMARY",
+      "W-F1-MAIN-ENTRY-STOREFRONT",
+      "W-F1-SOUTH-WINDOW-BAND",
+      "W-F2-NORTH-DESIGNCENTER-GLAZING",
+      "W-F1-LAB-CORRIDOR-EAST",
+      "W-F1-SUPPORT-CORRIDOR-WEST",
+      "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY",
+      "W-F2-SUPPORT-WEST",
+      "W-F2-LARGE-MEETING-EAST",
+      "W-F2-PROJECT-SOUTH",
+      "W-F2-PROG-LAB-WEST",
+      "W-F2-PALETTE-STORAGE-WEST"
+    ],
+    "included_ids_missing": [],
+    "included_ids_extra": [],
+    "excluded_unresolved_ids": [
+      "W-F1-CONNECTOR-CLOSE",
+      "W-F1-OFFICE-CORRIDOR-WEST",
+      "W-F1-RR-JAN-NORTH",
+      "CND-F1-ABY",
+      "W-F2-LAB-CORRIDOR-EAST",
+      "W-F2-RESEARCH-NORTH",
+      "W-F2-MEZZ-STOR-WEST",
+      "W-F2-STAIR-CORRIDOR",
+      "CND-F2-ABW",
+      "CND-F2-AAU",
+      "CND-F2-OPEN-LOBBY",
+      "CND-F2-LOADING-BELOW",
+      "CND-F2-TERRACE"
+    ],
+    "excluded_unresolved_present_in_geometry": [],
+    "no_unresolved_promoted": true,
+    "locked_read_only_context_preserved": true,
+    "high_bay_preserved": {
+      "ref_path": "locked_read_only_context.high_bay",
+      "source_ref": "code_inputs/high_bay_geometry.json",
+      "geometry_lock_refs": [
+        "GEO-001",
+        "GEO-002",
+        "GEO-003",
+        "GEO-005"
+      ],
+      "status": "LOCKED_READ_ONLY_REFERENCE"
+    },
+    "stair_opening_preserved": {
+      "ref_path": "locked_read_only_context.stair_opening",
+      "source_ref": "code_inputs/stair_opening_polygon.json",
+      "opening_id": "OV-F2-STAIR-OPENING",
+      "geometry_lock_refs": [
+        "GEO-004",
+        "GEO-007"
+      ],
+      "status": "LOCKED_READ_ONLY_REFERENCE"
+    },
+    "sealed_existing_tyler_refs": [
+      {
+        "segment_id": "W-F1-EXISTING-SEAL",
+        "ref_path": "levels.F1.interior_parent_wall_segments[5]",
+        "status": "REFERENCE_ONLY"
+      },
+      {
+        "segment_id": "W-F2-EXISTING-SEAL",
+        "ref_path": "levels.F2.interior_parent_wall_segments[1]",
+        "status": "REFERENCE_ONLY"
+      }
+    ],
+    "no_stair_geometry_generated": true,
+    "existing_tyler_sealed_no_entry": true,
+    "guard_edge_metadata_preserved": true,
+    "wall_thickness_rules_preserved": true,
+    "wall_thickness_audit": [
+      {
+        "item_id": "W-F1-MAIN-ENTRY-STOREFRONT",
+        "expected_ft": 1.0,
+        "actual_ft": 1.0,
+        "ok": true
+      },
+      {
+        "item_id": "W-F1-SOUTH-WINDOW-BAND",
+        "expected_ft": 1.0,
+        "actual_ft": 1.0,
+        "ok": true
+      },
+      {
+        "item_id": "W-F1-LAB-CORRIDOR-EAST",
+        "expected_ft": 0.4167,
+        "actual_ft": 0.4167,
+        "ok": true
+      },
+      {
+        "item_id": "W-F1-SUPPORT-CORRIDOR-WEST",
+        "expected_ft": 0.4167,
+        "actual_ft": 0.4167,
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-NORTH-DESIGNCENTER-GLAZING",
+        "expected_ft": 1.0,
+        "actual_ft": 1.0,
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY",
+        "expected_ft": 0.4167,
+        "actual_ft": 0.4167,
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-SUPPORT-WEST",
+        "expected_ft": 0.4167,
+        "actual_ft": 0.4167,
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-LARGE-MEETING-EAST",
+        "expected_ft": 0.4167,
+        "actual_ft": 0.4167,
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-PROJECT-SOUTH",
+        "expected_ft": 0.4167,
+        "actual_ft": 0.4167,
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-PROG-LAB-WEST",
+        "expected_ft": 0.4167,
+        "actual_ft": 0.4167,
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-PALETTE-STORAGE-WEST",
+        "expected_ft": 0.4167,
+        "actual_ft": 0.4167,
+        "ok": true
+      }
+    ],
+    "material_rules_preserved": true,
+    "material_audit": [
+      {
+        "item_id": "W-F1-MAIN-ENTRY-STOREFRONT",
+        "material_zone_ref": "MAT-STOREFRONT",
+        "ok": true
+      },
+      {
+        "item_id": "W-F1-SOUTH-WINDOW-BAND",
+        "material_zone_ref": "MAT-NEW-GENERAL",
+        "ok": true
+      },
+      {
+        "item_id": "W-F1-LAB-CORRIDOR-EAST",
+        "material_zone_ref": "MAT-NEW-GENERAL",
+        "ok": true
+      },
+      {
+        "item_id": "W-F1-SUPPORT-CORRIDOR-WEST",
+        "material_zone_ref": "MAT-NEW-GENERAL",
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-NORTH-DESIGNCENTER-GLAZING",
+        "material_zone_ref": "MAT-NEW-GENERAL",
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY",
+        "material_zone_ref": "MAT-OVERLOOK",
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-SUPPORT-WEST",
+        "material_zone_ref": "MAT-NEW-GENERAL",
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-LARGE-MEETING-EAST",
+        "material_zone_ref": "MAT-NEW-GENERAL",
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-PROJECT-SOUTH",
+        "material_zone_ref": "MAT-NEW-GENERAL",
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-PROG-LAB-WEST",
+        "material_zone_ref": "MAT-NEW-GENERAL",
+        "ok": true
+      },
+      {
+        "item_id": "W-F2-PALETTE-STORAGE-WEST",
+        "material_zone_ref": "MAT-HIGHBAY",
+        "ok": true
+      }
+    ],
+    "full_scene_merge_ready": false,
+    "glb_regeneration_blocked": true,
+    "merge_ready_for_current_extracted_scope": true,
+    "overall_readiness_note": "The current extracted subset passes the required validation gate. Full scene merge readiness still depends on completing the remaining pending envelope, parent-wall, and condition geometry.",
+    "building_validation_gate": {
+      "total_checks": 12,
+      "passing_checks": 12,
+      "all_checks_pass": true
+    },
+    "building_envelope_valid_json": true,
+    "source_stage_valid_json": true,
+    "building_envelope_duplicate_keys": 0,
+    "source_stage_duplicate_keys": 0
+  },
+  "topology_assertions": {
+    "associated_openings_must_remain_nested": [
+      "NF-004 under W-F1-MAIN-ENTRY-STOREFRONT",
+      "SF-002 under W-F1-SOUTH-WINDOW-BAND",
+      "NF-003 under W-F2-NORTH-DESIGNCENTER-GLAZING"
+    ],
+    "required_fallback_metadata": [
+      "placement_status=MIDPOINT_FALLBACK",
+      "placement_confidence=low",
+      "review_flags=[LOW_CONFIDENCE_REVIEW]",
+      "distance_from_start_ft preserved"
+    ]
+  },
+  "validation_gate_snapshot": {
+    "merge_ready_for_current_extracted_scope": true,
+    "total_checks": 12,
+    "passing_checks": 12,
+    "all_checks_pass": true,
+    "overall_readiness_note": "The current extracted subset passes the required validation gate. Full scene merge readiness still depends on completing the remaining pending envelope, parent-wall, and condition geometry."
+  },
+  "master_config_reference": {
+    "package": {
+      "name": "NIMA Code Development Master Package",
+      "version": "v1.0",
+      "date": "2026-04-26",
+      "purpose": "Baseline package for code development/model generation for the NIMA Phase II 1:1 spatial-review build.",
+      "scope_note": "Deployable proxy dimensions for spatial review, not construction-document/BIM precision."
+    },
+    "standards": {
+      "interior_wall_thickness_ft": 0.4167,
+      "exterior_wall_thickness_ft": 1.0,
+      "high_bay_floor_material": "Cement slab",
+      "new_non_high_bay_floor_material": "Uniform refined floor material",
+      "high_bay_trim": "No wood trim",
+      "connector_lobby_overlook_finish": "Refined lobby/connector feel allowed"
+    }
+  }
+}

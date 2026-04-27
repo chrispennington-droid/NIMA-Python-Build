@@ -1,0 +1,883 @@
+{
+  "document_type": "partial_mvp_spatial_review_scene",
+  "labels": [
+    "PARTIAL MVP SPATIAL-REVIEW BUILD",
+    "NOT FINAL",
+    "NOT FULL-SCENE MERGE",
+    "UNRESOLVED GEOMETRY EXCLUDED",
+    "GENERATED FROM scene_partial_expanded_scope_review.json ONLY",
+    "REMAINING UNRESOLVED ITEMS REQUIRE MANUAL VECTOR CONFIRMATION OR LATER EXPLICIT PROXY APPROVAL"
+  ],
+  "source_artifact": "code_inputs/scene_partial_expanded_scope_review.json",
+  "full_scene_merge_ready": false,
+  "glb_regeneration_blocked": true,
+  "read_only_context_refs": {
+    "high_bay": {
+      "ref_path": "locked_read_only_context.high_bay",
+      "source_ref": "code_inputs/high_bay_geometry.json",
+      "geometry_lock_refs": [
+        "GEO-001",
+        "GEO-002",
+        "GEO-003",
+        "GEO-005"
+      ],
+      "status": "LOCKED_READ_ONLY_REFERENCE"
+    },
+    "stair_opening": {
+      "ref_path": "locked_read_only_context.stair_opening",
+      "source_ref": "code_inputs/stair_opening_polygon.json",
+      "opening_id": "OV-F2-STAIR-OPENING",
+      "geometry_lock_refs": [
+        "GEO-004",
+        "GEO-007"
+      ],
+      "status": "LOCKED_READ_ONLY_REFERENCE"
+    },
+    "sealed_existing_tyler_refs": [
+      {
+        "segment_id": "W-F1-EXISTING-SEAL",
+        "ref_path": "levels.F1.interior_parent_wall_segments[5]",
+        "status": "REFERENCE_ONLY"
+      },
+      {
+        "segment_id": "W-F2-EXISTING-SEAL",
+        "ref_path": "levels.F2.interior_parent_wall_segments[1]",
+        "status": "REFERENCE_ONLY"
+      }
+    ]
+  },
+  "included_geometry_ids": [
+    "F1-PLATE-PRIMARY",
+    "F2-PLATE-PRIMARY",
+    "W-F1-MAIN-ENTRY-STOREFRONT",
+    "W-F1-SOUTH-WINDOW-BAND",
+    "W-F2-NORTH-DESIGNCENTER-GLAZING",
+    "W-F1-LAB-CORRIDOR-EAST",
+    "W-F1-SUPPORT-CORRIDOR-WEST",
+    "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY",
+    "W-F2-SUPPORT-WEST",
+    "W-F2-LARGE-MEETING-EAST",
+    "W-F2-PROJECT-SOUTH",
+    "W-F2-PROG-LAB-WEST",
+    "W-F2-PALETTE-STORAGE-WEST"
+  ],
+  "excluded_unresolved_ids": [
+    "W-F1-CONNECTOR-CLOSE",
+    "W-F1-OFFICE-CORRIDOR-WEST",
+    "W-F1-RR-JAN-NORTH",
+    "CND-F1-ABY",
+    "W-F2-LAB-CORRIDOR-EAST",
+    "W-F2-RESEARCH-NORTH",
+    "W-F2-MEZZ-STOR-WEST",
+    "W-F2-STAIR-CORRIDOR",
+    "CND-F2-ABW",
+    "CND-F2-AAU",
+    "CND-F2-OPEN-LOBBY",
+    "CND-F2-LOADING-BELOW",
+    "CND-F2-TERRACE"
+  ],
+  "source_normalization_flags": [
+    "F2-ABV overlap remains unresolved between W-F2-MEZZ-STOR-WEST and W-F2-PALETTE-STORAGE-WEST."
+  ],
+  "level_z": {
+    "F1": {
+      "floor_elevation_ft": 0.0,
+      "status": "WORKING_BASELINE"
+    },
+    "F2": {
+      "floor_elevation_ft": 14.0,
+      "status": "WORKING_BASELINE",
+      "note": "F2 = 14.0 ft is a working baseline unless later overridden by more authoritative level/z data."
+    },
+    "roof": {
+      "high_east_roof_top_ft": 38.9569377990431,
+      "status": "LOCKED",
+      "source_refs": [
+        "STD-016",
+        "GEO-003"
+      ]
+    }
+  },
+  "materials_reference": {
+    "MAT-NEW-GENERAL": {
+      "Material_ID": "MAT-NEW-GENERAL",
+      "Applies_To": "New non-high-bay areas",
+      "Floor_Finish": "Uniform refined floor material",
+      "Wall_Finish": "Warm off-white painted walls",
+      "Trim / Accent": "Light wood accents allowed in refined areas",
+      "Status": "LOCKED",
+      "Notes": "Connector/lobby/office/lab simplified uniform floor"
+    },
+    "MAT-HIGHBAY": {
+      "Material_ID": "MAT-HIGHBAY",
+      "Applies_To": "High-bay production area",
+      "Floor_Finish": "Cement slab",
+      "Wall_Finish": "Warm off-white / neutral industrial walls",
+      "Trim / Accent": "No wood trim",
+      "Status": "LOCKED",
+      "Notes": "Industrial high-bay look"
+    },
+    "MAT-OVERLOOK": {
+      "Material_ID": "MAT-OVERLOOK",
+      "Applies_To": "High-bay overlook",
+      "Floor_Finish": "Uniform refined floor material",
+      "Wall_Finish": "Warm off-white painted walls",
+      "Trim / Accent": "Light wood trim allowed",
+      "Status": "LOCKED",
+      "Notes": "Refined feel from existing-building photos"
+    },
+    "MAT-RESTROOM-DOOR": {
+      "Material_ID": "MAT-RESTROOM-DOOR",
+      "Applies_To": "Restroom doors",
+      "Floor_Finish": "N/A",
+      "Wall_Finish": "N/A",
+      "Trim / Accent": "Solid warm light wood door leaf",
+      "Status": "LOCKED",
+      "Notes": "Matches existing woodwork color family"
+    },
+    "MAT-STOREFRONT": {
+      "Material_ID": "MAT-STOREFRONT",
+      "Applies_To": "Main entry / glazing",
+      "Floor_Finish": "Uniform refined floor material adjacent",
+      "Wall_Finish": "Warm off-white walls",
+      "Trim / Accent": "Glass/aluminum + light wood trim where appropriate",
+      "Status": "LOCKED",
+      "Notes": "Lobby/connector visual language"
+    }
+  },
+  "flattened_geometry": [
+    {
+      "item_id": "F1-PLATE-PRIMARY",
+      "floor": "F1",
+      "category": "floor_plate_boundaries",
+      "base_level_elevation_ft": 0.0,
+      "classification": "primary_floor_plate",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": null,
+      "geometry": {
+        "type": "polygon_ft",
+        "vertices": [
+          [
+            -69.184,
+            35.955
+          ],
+          [
+            -23.863,
+            39.894
+          ],
+          [
+            35.454,
+            32.594
+          ],
+          [
+            68.512,
+            1.557
+          ],
+          [
+            64.521,
+            -21.104
+          ],
+          [
+            -4.878,
+            -44.447
+          ],
+          [
+            -25.911,
+            -44.447
+          ],
+          [
+            -25.911,
+            14.003
+          ],
+          [
+            -39.513,
+            35.876
+          ],
+          [
+            -59.259,
+            17.627
+          ]
+        ],
+        "status": "EXTRACTED_PROXY",
+        "confidence": {
+          "level": "medium",
+          "score": 0.68,
+          "basis": [
+            "f1_svg_grid_calibration",
+            "layer_10_filled_polygon_trace",
+            "locked_package_feet_space_reconciliation"
+          ]
+        },
+        "extraction_notes": [
+          "First-pass F1 floor plate traced from filled occupied-zone polygons in the calibrated first-floor SVG.",
+          "This remains a proxy outer boundary until a dedicated perimeter-stroke extraction pass replaces filled-polygon tracing."
+        ]
+      },
+      "door_refs": [],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08"
+      ]
+    },
+    {
+      "item_id": "W-F1-MAIN-ENTRY-STOREFRONT",
+      "floor": "F1",
+      "category": "exterior_wall_segments",
+      "base_level_elevation_ft": 0.0,
+      "classification": "exterior_storefront",
+      "material_zone_ref": "MAT-STOREFRONT",
+      "thickness_ft": 1.0,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            -23.863,
+            39.894
+          ],
+          [
+            35.454,
+            32.594
+          ]
+        ],
+        "status": "EXTRACTED_PROXY",
+        "confidence": {
+          "level": "medium",
+          "score": 0.72,
+          "basis": [
+            "f1_svg_grid_calibration",
+            "layer_10_filled_polygon_trace",
+            "wall_schedule_alignment"
+          ]
+        },
+        "extraction_notes": [
+          "Proxy storefront segment extracted from the calibrated F1 SVG occupied-zone edge.",
+          "NF-004 was placed as a fallback midpoint opening on this pass; SF-004 and GEM-F1-EXT-01 remain schedule-associated refs pending higher-confidence vector placement."
+        ]
+      },
+      "door_refs": [
+        "GEM-F1-EXT-01"
+      ],
+      "associated_openings": [
+        {
+          "opening_id": "NF-004",
+          "parent_segment_id": "W-F1-MAIN-ENTRY-STOREFRONT",
+          "center_pt_ft": [
+            5.796,
+            36.244
+          ],
+          "distance_from_start_ft": 29.882,
+          "width_ft": 8.8,
+          "height_ft": 30.4,
+          "placement_status": "MIDPOINT_FALLBACK",
+          "placement_confidence": "low",
+          "review_flags": [
+            "LOW_CONFIDENCE_REVIEW"
+          ],
+          "placement_note": "No schedule centerpoint or SVG/vector evidence found; temporary midpoint fallback used."
+        }
+      ],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-09"
+      ]
+    },
+    {
+      "item_id": "W-F1-SOUTH-WINDOW-BAND",
+      "floor": "F1",
+      "category": "exterior_wall_segments",
+      "base_level_elevation_ft": 0.0,
+      "classification": "exterior",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": 1.0,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            -25.911,
+            -44.447
+          ],
+          [
+            -4.878,
+            -44.447
+          ]
+        ],
+        "status": "EXTRACTED_PROXY",
+        "confidence": {
+          "level": "medium",
+          "score": 0.58,
+          "basis": [
+            "f1_svg_grid_calibration",
+            "layer_10_filled_polygon_trace",
+            "wall_schedule_alignment"
+          ]
+        },
+        "extraction_notes": [
+          "This south-facing proxy wall is the weakest of the three first-pass exterior segments and should be revisited with explicit perimeter-stroke extraction.",
+          "SF-002 was placed as a fallback midpoint opening because no better centerpoint evidence was verified in this pass."
+        ]
+      },
+      "door_refs": [],
+      "associated_openings": [
+        {
+          "opening_id": "SF-002",
+          "parent_segment_id": "W-F1-SOUTH-WINDOW-BAND",
+          "center_pt_ft": [
+            -15.395,
+            -44.447
+          ],
+          "distance_from_start_ft": 10.517,
+          "width_ft": 12.8,
+          "height_ft": 4.8,
+          "placement_status": "MIDPOINT_FALLBACK",
+          "placement_confidence": "low",
+          "review_flags": [
+            "LOW_CONFIDENCE_REVIEW"
+          ],
+          "placement_note": "No schedule centerpoint or SVG/vector evidence found; temporary midpoint fallback used."
+        }
+      ],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-09"
+      ]
+    },
+    {
+      "item_id": "W-F1-LAB-CORRIDOR-EAST",
+      "floor": "F1",
+      "category": "interior_parent_wall_segments",
+      "base_level_elevation_ft": 0.0,
+      "classification": "interior_parent_wall",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": 0.4167,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            -26.213,
+            14.555
+          ],
+          [
+            -26.213,
+            -44.499
+          ]
+        ],
+        "status": "EXTRACTED",
+        "confidence": {
+          "level": "medium",
+          "score": 0.83,
+          "basis": [
+            "parent_wall_schedule_exists",
+            "door_coordination_exists",
+            "f1_svg_vector_wall_body",
+            "f1_svg_preview_verification",
+            "package_grid_calibration"
+          ]
+        },
+        "extraction_notes": [
+          "Extracted from a continuous vertical wall-body vector in the F1 SVG aligned to the Laser, Microscopy, XRay, and Clean Room stack.",
+          "Preview verification confirmed this wall as the east boundary of the lab corridor zone.",
+          "Door refs remain attached for later opening placement from schedule centerpoints or direct vector evidence."
+        ]
+      },
+      "door_refs": [
+        "F1-AAA",
+        "F1-AAB",
+        "F1-AAC",
+        "F1-AAD"
+      ],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08"
+      ]
+    },
+    {
+      "item_id": "W-F1-SUPPORT-CORRIDOR-WEST",
+      "floor": "F1",
+      "category": "interior_parent_wall_segments",
+      "base_level_elevation_ft": 0.0,
+      "classification": "interior_parent_wall",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": 0.4167,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            -46.405,
+            3.474
+          ],
+          [
+            -46.405,
+            -45.813
+          ]
+        ],
+        "status": "EXTRACTED",
+        "confidence": {
+          "level": "medium",
+          "score": 0.77,
+          "basis": [
+            "parent_wall_schedule_exists",
+            "door_coordination_exists",
+            "f1_svg_vector_wall_body",
+            "f1_svg_preview_verification",
+            "package_grid_calibration"
+          ]
+        },
+        "extraction_notes": [
+          "Extracted from a vertically aligned F1 SVG wall-body vector stack centered at approximately x = 1866.337 SVG units.",
+          "The preview and source linework support this as the west organizer wall for the support-corridor room stack, with door/opening interruptions to be coordinated later from schedule references.",
+          "Door refs remain attached for later opening placement from schedule centerpoints or direct vector evidence."
+        ]
+      },
+      "door_refs": [
+        "F1-AAH",
+        "F1-AAG",
+        "F1-AAF",
+        "F1-AAE"
+      ],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08"
+      ]
+    },
+    {
+      "item_id": "F2-PLATE-PRIMARY",
+      "floor": "F2",
+      "category": "floor_plate_boundaries",
+      "base_level_elevation_ft": 14.0,
+      "classification": "primary_floor_plate",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": null,
+      "geometry": {
+        "type": "polygon_ft",
+        "vertices": [
+          [
+            -26.407,
+            13.237
+          ],
+          [
+            1.936,
+            13.553
+          ],
+          [
+            9.555,
+            39.734
+          ],
+          [
+            33.416,
+            43.162
+          ],
+          [
+            70.618,
+            12.913
+          ],
+          [
+            68.509,
+            1.211
+          ],
+          [
+            60.336,
+            -45.189
+          ],
+          [
+            30.991,
+            -45.426
+          ],
+          [
+            -26.407,
+            -45.453
+          ]
+        ],
+        "status": "EXTRACTED_PROXY",
+        "confidence": {
+          "level": "medium",
+          "score": 0.66,
+          "basis": [
+            "f2_svg_grid_calibration",
+            "layer_1_copy_filled_polygon_trace",
+            "locked_hb_interface_reconciliation"
+          ]
+        },
+        "extraction_notes": [
+          "First-pass F2 floor plate traced from filled occupied-zone polygons in the calibrated second-floor SVG.",
+          "The east interface vertices were reconciled onto the locked high-bay west boundary to preserve the HB keep-out condition.",
+          "This remains a proxy outer boundary until a dedicated perimeter-stroke extraction pass replaces filled-polygon tracing."
+        ]
+      },
+      "door_refs": [],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-10"
+      ]
+    },
+    {
+      "item_id": "W-F2-NORTH-DESIGNCENTER-GLAZING",
+      "floor": "F2",
+      "category": "exterior_wall_segments",
+      "base_level_elevation_ft": 14.0,
+      "classification": "exterior",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": 1.0,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            9.555,
+            39.734
+          ],
+          [
+            33.416,
+            43.162
+          ],
+          [
+            70.618,
+            12.913
+          ]
+        ],
+        "status": "EXTRACTED_PROXY",
+        "confidence": {
+          "level": "medium",
+          "score": 0.7,
+          "basis": [
+            "f2_svg_grid_calibration",
+            "layer_1_copy_filled_polygon_trace",
+            "wall_schedule_alignment",
+            "locked_hb_interface_reconciliation"
+          ]
+        },
+        "extraction_notes": [
+          "Proxy north glazing wall extracted from the calibrated F2 SVG occupied-zone boundary.",
+          "The east endpoint was reconciled onto the locked high-bay west boundary to preserve the high-bay keep-out condition."
+        ]
+      },
+      "door_refs": [],
+      "associated_openings": [
+        {
+          "opening_id": "NF-003",
+          "parent_segment_id": "W-F2-NORTH-DESIGNCENTER-GLAZING",
+          "center_pt_ft": [
+            42.663,
+            35.641
+          ],
+          "distance_from_start_ft": 36.027,
+          "width_ft": 62.4,
+          "height_ft": 23.2,
+          "placement_status": "MIDPOINT_FALLBACK",
+          "placement_confidence": "low",
+          "review_flags": [
+            "LOW_CONFIDENCE_REVIEW"
+          ],
+          "placement_note": "No schedule centerpoint or SVG/vector evidence found; temporary midpoint fallback used."
+        }
+      ],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-09"
+      ]
+    },
+    {
+      "item_id": "W-F2-HIGHBAY-OPEN-BELOW-BOUNDARY",
+      "floor": "F2",
+      "category": "interior_parent_wall_segments",
+      "base_level_elevation_ft": 14.0,
+      "classification": "guard_edge_parent",
+      "material_zone_ref": "MAT-OVERLOOK",
+      "thickness_ft": 0.4167,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            72.3,
+            36.6
+          ],
+          [
+            71.8,
+            22.0
+          ]
+        ],
+        "status": "EXTRACTED",
+        "confidence": {
+          "level": "medium",
+          "score": 0.82,
+          "basis": [
+            "master_wall_row_exists",
+            "overlook_edge_facade_ref_exists",
+            "f2_svg_preview_verification",
+            "locked_stair_opening_edge_reference",
+            "package_grid_calibration"
+          ]
+        },
+        "extraction_notes": [
+          "F2 SVG preview verification confirmed that the High-Bay Overlook-facing side of the OPEN TO LOBBY BELOW polygon is the relevant guard/open-edge boundary for this segment.",
+          "To preserve read-only geometry, this extracted segment inherits the east edge of the finalized locked stair/open-to-lobby opening polygon rather than redrawing a separate proxy line.",
+          "This segment remains a guard/open-edge boundary and not a standard full-height wall."
+        ]
+      },
+      "door_refs": [],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-09"
+      ]
+    },
+    {
+      "item_id": "W-F2-SUPPORT-WEST",
+      "floor": "F2",
+      "category": "interior_parent_wall_segments",
+      "base_level_elevation_ft": 14.0,
+      "classification": "interior_parent_wall",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": 0.4167,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            1.936,
+            -33.193
+          ],
+          [
+            1.936,
+            -45.453
+          ]
+        ],
+        "status": "EXTRACTED",
+        "confidence": {
+          "level": "medium",
+          "score": 0.78,
+          "basis": [
+            "source_wall_schedule_row_exists",
+            "door_coordination_rows_exist",
+            "f2_svg_preview_support_stack_alignment",
+            "f2_svg_single_vertical_wall_body_pair_confirmed",
+            "paired_line_centerline_reconciled_into_package_feet_space",
+            "package_grid_calibration"
+          ]
+        },
+        "extraction_notes": [
+          "Extracted from a single defensible vertical wall-body pair on the west side of the SM MEETING / IDF / ELEC support stack in the F2 SVG.",
+          "The extracted centerline uses the midpoint of the confirmed paired vertical wall-body traces and does not derive thickness from SVG line weight.",
+          "Door refs remain attached for later opening placement from schedule centerpoints or direct vector evidence."
+        ]
+      },
+      "door_refs": [
+        "F2-ABF",
+        "F2-ABG",
+        "F2-ABH"
+      ],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08"
+      ]
+    },
+    {
+      "item_id": "W-F2-LARGE-MEETING-EAST",
+      "floor": "F2",
+      "category": "interior_parent_wall_segments",
+      "base_level_elevation_ft": 14.0,
+      "classification": "interior_parent_wall",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": 0.4167,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            14.789,
+            0.713
+          ],
+          [
+            14.789,
+            -25.705
+          ]
+        ],
+        "status": "EXTRACTED",
+        "confidence": {
+          "level": "medium",
+          "score": 0.76,
+          "basis": [
+            "source_wall_schedule_row_exists",
+            "door_coordination_row_exists",
+            "f2_svg_continuous_vertical_wall_body_polygon_confirmed",
+            "adjacent_lab_polygon_west_edge_crosscheck",
+            "double_door_folding_wall_context_reviewed",
+            "centerline_derived_from_confirmed_wall_body_polygon_midline",
+            "package_grid_calibration"
+          ]
+        },
+        "extraction_notes": [
+          "Extracted from the continuous vertical wall-body polygon confirmed at the large-meeting east edge in the F2 SVG, with the adjacent east-side lab polygon using the same boundary as its west edge.",
+          "The extracted centerline uses the midpoint of the confirmed wall-body polygon edges and does not derive wall thickness from SVG line weight; interior thickness remains the locked 0.4167 ft standard.",
+          "The nearby double-door and folding-wall context was reviewed before extraction; door ref F2-ABL remains attached for later opening placement without any placement change in this pass."
+        ]
+      },
+      "door_refs": [
+        "F2-ABL"
+      ],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08"
+      ]
+    },
+    {
+      "item_id": "W-F2-PROJECT-SOUTH",
+      "floor": "F2",
+      "category": "interior_parent_wall_segments",
+      "base_level_elevation_ft": 14.0,
+      "classification": "interior_parent_wall",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": 0.4167,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            2.397,
+            2.638
+          ],
+          [
+            11.242,
+            1.07
+          ]
+        ],
+        "status": "EXTRACTED",
+        "confidence": {
+          "level": "medium",
+          "score": 0.77,
+          "basis": [
+            "source_wall_schedule_row_exists",
+            "door_coordination_rows_exist",
+            "f2_svg_project_room_south_wall_body_pair_confirmed",
+            "continuous_diagonal_parent_wall_trace_confirmed",
+            "centerline_derived_from_confirmed_wall_body_pair_midline",
+            "package_grid_calibration"
+          ]
+        },
+        "extraction_notes": [
+          "Extracted from the continuous diagonal wall-body pair confirmed along the south edge of the two project rooms in the F2 SVG.",
+          "The extracted centerline uses the midpoint of the confirmed paired diagonal wall-body traces and does not derive wall thickness from SVG line weight; interior thickness remains the locked 0.4167 ft standard.",
+          "Door refs F2-ABM and F2-ABN remain attached for later opening placement without any placement change in this pass."
+        ]
+      },
+      "door_refs": [
+        "F2-ABM",
+        "F2-ABN"
+      ],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08"
+      ]
+    },
+    {
+      "item_id": "W-F2-PROG-LAB-WEST",
+      "floor": "F2",
+      "category": "interior_parent_wall_segments",
+      "base_level_elevation_ft": 14.0,
+      "classification": "interior_parent_wall",
+      "material_zone_ref": "MAT-NEW-GENERAL",
+      "thickness_ft": 0.4167,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            47.113,
+            5.063
+          ],
+          [
+            38.927,
+            -41.445
+          ]
+        ],
+        "status": "EXTRACTED",
+        "confidence": {
+          "level": "medium",
+          "score": 0.75,
+          "basis": [
+            "source_wall_schedule_row_exists",
+            "door_coordination_rows_exist",
+            "f2_svg_prog_mgr_lab_west_edge_segment_chain_confirmed",
+            "filled_polygon_west_edge_crosscheck",
+            "continuous_diagonal_parent_wall_slope_consistency_confirmed",
+            "centerline_derived_from_confirmed_wall_body_pair_midline",
+            "package_grid_calibration"
+          ]
+        },
+        "extraction_notes": [
+          "Extracted from the confirmed diagonal west-edge wall-body segment chain running from the program-manager top through the stacked lab row in the F2 SVG.",
+          "The extracted centerline uses the midpoint of the confirmed paired diagonal wall-body traces and filled-polygon edge crosscheck, and does not derive wall thickness from SVG line weight; interior thickness remains the locked 0.4167 ft standard.",
+          "Door refs F2-ABO through F2-ABS remain attached for later opening placement without any placement change in this pass."
+        ]
+      },
+      "door_refs": [
+        "F2-ABO",
+        "F2-ABP",
+        "F2-ABQ",
+        "F2-ABR",
+        "F2-ABS"
+      ],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08"
+      ]
+    },
+    {
+      "item_id": "W-F2-PALETTE-STORAGE-WEST",
+      "floor": "F2",
+      "category": "interior_parent_wall_segments",
+      "base_level_elevation_ft": 14.0,
+      "classification": "interior_parent_wall",
+      "material_zone_ref": "MAT-HIGHBAY",
+      "thickness_ft": 0.4167,
+      "geometry": {
+        "type": "polyline_ft",
+        "vertices": [
+          [
+            65.095,
+            -23.135
+          ],
+          [
+            61.179,
+            -45.374
+          ]
+        ],
+        "status": "EXTRACTED",
+        "confidence": {
+          "level": "medium",
+          "score": 0.73,
+          "basis": [
+            "source_wall_schedule_row_exists",
+            "door_coordination_row_exists",
+            "high_bay_support_finish_context_locked",
+            "source_door_ref_overlap_still_flagged",
+            "f2_svg_palette_storage_west_wall_body_pair_confirmed",
+            "continuous_diagonal_parent_wall_trace_confirmed",
+            "centerline_derived_from_confirmed_wall_body_pair_midline",
+            "package_grid_calibration"
+          ]
+        },
+        "extraction_notes": [
+          "Extracted from the confirmed diagonal wall-body pair forming the west edge of the palette-storage room in the F2 SVG high-bay-adjacent cluster.",
+          "The extracted centerline uses the midpoint of the confirmed paired diagonal wall-body traces and does not derive wall thickness from SVG line weight; interior thickness remains the locked 0.4167 ft standard and MAT-HIGHBAY material logic remains unchanged.",
+          "Door ref F2-ABV remains attached for later opening placement, and its source overlap with W-F2-MEZZ-STOR-WEST remains flagged under source-normalization review; this extraction does not resolve, reassign, or normalize that overlap."
+        ]
+      },
+      "door_refs": [
+        "F2-ABV"
+      ],
+      "associated_openings": [],
+      "source_trace": [
+        "SRC-01",
+        "SRC-08"
+      ]
+    }
+  ]
+}
